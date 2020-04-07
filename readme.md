@@ -8,12 +8,13 @@ Målet er at lave følgende projekter:
 - [x] **PIC->Display**
 
 PIC controller der kan vise noget på et LCD display
-
+* lcd_display_1519
 
 - [ ] **PIC->I2C->PIC->Display**
 
 PIC controller der kan sende I2C signal til en PIC controller der kan vise noget på et LCD display
-
+* pic_lcd_display_1519
+* pic_i2c_1519
 
 - [ ] **PC->USB->PIC**
 
