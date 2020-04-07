@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>com.microchip.mplab.nbide.embedded.makeproject</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/make-project/1">
+            <name>i2c_lcd_display_1519</name>
+            <creation-uuid>18f4e81f-89bb-464b-bd2b-e08978a21dbe</creation-uuid>
+            <make-project-type>0</make-project-type>
+            <c-extensions/>
+            <cpp-extensions/>
+            <header-extensions/>
+            <asminc-extensions/>
+            <make-dep-projects/>
+            <sourceRootList/>
+            <confList>
+                <confElem>
+                    <name>default</name>
+                    <type>2</type>
+                </confElem>
+            </confList>
+            <sourceEncoding>ISO-8859-1</sourceEncoding>
+            <formatting>
+                <project-formatting-style>false</project-formatting-style>
+            </formatting>
+        </data>
+    </configuration>
+</project>
