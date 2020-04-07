@@ -15,7 +15,7 @@ PIC controller der kan vise noget på et LCD display
 - [ ] Doing 
 
 PIC controller der kan sende I2C signal til en PIC controller der kan vise noget på et LCD display
-* pic_lcd_display_1519
+* i2c_lcd_display_1519
 * pic_i2c_1519
 
 **PC->USB->PIC** 
