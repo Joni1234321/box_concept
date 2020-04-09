@@ -1,0 +1,263 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1519 ]
+[d frameptr 6 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"13 E:\Projects\Box_concept\pic_i2c_1519.X\i2c_master.c
+[v _i2c_master_send i2c_master_send `(v  1 e 1 0 ]
+"30
+[v _i2c_master_start i2c_master_start `(v  1 e 1 0 ]
+"37
+[v _i2c_master_stop i2c_master_stop `(v  1 e 1 0 ]
+"44
+[v _i2c_master_write i2c_master_write `(uc  1 e 1 0 ]
+"10 E:\Projects\Box_concept\pic_i2c_1519.X\init.c
+[v _init init `(v  1 e 1 0 ]
+"18
+[v _init_oscillator init_oscillator `(v  1 e 1 0 ]
+"26
+[v _init_ports init_ports `(v  1 e 1 0 ]
+"31
+[v _res_ports res_ports `(v  1 e 1 0 ]
+"52
+[v _set_ports set_ports `(v  1 e 1 0 ]
+"57
+[v _init_i2c init_i2c `(v  1 e 1 0 ]
+"76
+[v _init_interrupt init_interrupt `(v  1 e 1 0 ]
+"85
+[v _init_interrupt_timer init_interrupt_timer `(v  1 e 1 0 ]
+"5 E:\Projects\Box_concept\pic_i2c_1519.X\interrupt.c
+[v _on_interrupt_timer_0 on_interrupt_timer_0 `(v  1 e 1 0 ]
+"9
+[v _interruptHandler interruptHandler `II(v  1 e 1 0 ]
+"14 E:\Projects\Box_concept\pic_i2c_1519.X\pic_i2c.c
+[v _main main `(v  1 e 1 0 ]
+[s S306 . 1 `uc 1 sleep 1 0 :1:0 
+]
+"13 E:\Projects\Box_concept\pic_i2c_1519.X/interrupt.h
+[u S308 . 1 `S306 1 . 1 0 ]
+[v _INT_FLAGS INT_FLAGS `VES308  1 e 1 0 ]
+[s S200 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"374 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1519.h
+[s S209 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S214 . 1 `S200 1 . 1 0 `S209 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES214  1 e 1 @11 ]
+[s S57 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"732
+[u S66 . 1 `S57 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES66  1 e 1 @17 ]
+"811
+[v _TMR0 TMR0 `VEuc  1 e 1 @21 ]
+"1131
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1193
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1255
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+[s S173 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1272
+[u S182 . 1 `S173 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES182  1 e 1 @142 ]
+"1317
+[v _TRISD TRISD `VEuc  1 e 1 @143 ]
+[s S232 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 TMR0SE 1 0 :1:4 
+`uc 1 TMR0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nWPUEN 1 0 :1:7 
+]
+"1530
+[s S239 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+]
+[u S246 . 1 `S232 1 . 1 0 `S239 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES246  1 e 1 @149 ]
+[s S125 . 1 `uc 1 SCS 1 0 :2:0 
+`uc 1 . 1 0 :1:2 
+`uc 1 IRCF 1 0 :4:3 
+]
+"1727
+[s S129 . 1 `uc 1 SCS0 1 0 :1:0 
+`uc 1 SCS1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 IRCF0 1 0 :1:3 
+`uc 1 IRCF1 1 0 :1:4 
+`uc 1 IRCF2 1 0 :1:5 
+`uc 1 IRCF3 1 0 :1:6 
+]
+[u S137 . 1 `S125 1 . 1 0 `S129 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES137  1 e 1 @153 ]
+"2020
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+"2082
+[v _LATB LATB `VEuc  1 e 1 @269 ]
+"2144
+[v _LATC LATC `VEuc  1 e 1 @270 ]
+[s S327 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
+]
+"2161
+[u S336 . 1 `S327 1 . 1 0 ]
+[v _LATCbits LATCbits `VES336  1 e 1 @270 ]
+"2206
+[v _LATD LATD `VEuc  1 e 1 @271 ]
+"2426
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"2479
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"2537
+[v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
+"2599
+[v _ANSELD ANSELD `VEuc  1 e 1 @399 ]
+"3306
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @529 ]
+"3344
+[v _SSPADD SSPADD `VEuc  1 e 1 @530 ]
+"3542
+[v _SSPCON1 SSPCON1 `VEuc  1 e 1 @533 ]
+[s S35 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"3768
+[u S44 . 1 `S35 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES44  1 e 1 @534 ]
+"5206
+[v _PEN PEN `VEb  1 e 0 @4274 ]
+"5377
+[v _SEN SEN `VEb  1 e 0 @4272 ]
+"5401
+[v _SSPIF SSPIF `VEb  1 e 0 @139 ]
+"5437
+[v _T0IE T0IE `VEb  1 e 0 @93 ]
+"5440
+[v _T0IF T0IF `VEb  1 e 0 @90 ]
+"14 E:\Projects\Box_concept\pic_i2c_1519.X\pic_i2c.c
+[v _main main `(v  1 e 1 0 ]
+{
+"27
+} 0
+"10 E:\Projects\Box_concept\pic_i2c_1519.X\init.c
+[v _init init `(v  1 e 1 0 ]
+{
+"16
+} 0
+"26
+[v _init_ports init_ports `(v  1 e 1 0 ]
+{
+"30
+} 0
+"52
+[v _set_ports set_ports `(v  1 e 1 0 ]
+{
+"55
+} 0
+"31
+[v _res_ports res_ports `(v  1 e 1 0 ]
+{
+"50
+} 0
+"18
+[v _init_oscillator init_oscillator `(v  1 e 1 0 ]
+{
+"22
+} 0
+"76
+[v _init_interrupt init_interrupt `(v  1 e 1 0 ]
+{
+"82
+} 0
+"85
+[v _init_interrupt_timer init_interrupt_timer `(v  1 e 1 0 ]
+{
+"104
+} 0
+"57
+[v _init_i2c init_i2c `(v  1 e 1 0 ]
+{
+"73
+} 0
+"13 E:\Projects\Box_concept\pic_i2c_1519.X\i2c_master.c
+[v _i2c_master_send i2c_master_send `(v  1 e 1 0 ]
+{
+[v i2c_master_send@bus_add bus_add `uc  1 a 1 wreg ]
+[v i2c_master_send@bus_add bus_add `uc  1 a 1 wreg ]
+[v i2c_master_send@data data `uc  1 p 1 2 ]
+[v i2c_master_send@bus_add bus_add `uc  1 a 1 4 ]
+"22
+} 0
+"44
+[v _i2c_master_write i2c_master_write `(uc  1 e 1 0 ]
+{
+[v i2c_master_write@data data `ui  1 p 2 0 ]
+"56
+} 0
+"37
+[v _i2c_master_stop i2c_master_stop `(v  1 e 1 0 ]
+{
+"42
+} 0
+"30
+[v _i2c_master_start i2c_master_start `(v  1 e 1 0 ]
+{
+"35
+} 0
+"9 E:\Projects\Box_concept\pic_i2c_1519.X\interrupt.c
+[v _interruptHandler interruptHandler `II(v  1 e 1 0 ]
+{
+"16
+} 0
+"5
+[v _on_interrupt_timer_0 on_interrupt_timer_0 `(v  1 e 1 0 ]
+{
+"7
+} 0
