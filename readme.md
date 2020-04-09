@@ -19,7 +19,7 @@ PIC controller der kan sende I2C signal til en PIC controller der kan vise noget
 * pic_i2c_1519
 
 **PC->USB->PIC** 
-- [ ] Not Completed 
+- [ ] Doing 
 
 PIC controller der kan modtage og sende data gennem en UART port forbundet med computeren
 
