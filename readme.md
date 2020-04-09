@@ -12,7 +12,7 @@ PIC controller der kan vise noget på et LCD display
 * lcd_display_1519
 
 **PIC->I2C->PIC->Display**
-- [ ] Doing 
+- [x] Done 
 
 PIC controller der kan sende I2C signal til en PIC controller der kan vise noget på et LCD display
 * i2c_lcd_display_1519
