@@ -12,14 +12,14 @@ PIC controller der kan vise noget på et LCD display
 * lcd_display_1519
 
 **PIC->I2C->PIC->Display**
-- [ ] Doing 
+- [x] Done 
 
 PIC controller der kan sende I2C signal til en PIC controller der kan vise noget på et LCD display
-* pic_lcd_display_1519
+* i2c_lcd_display_1519
 * pic_i2c_1519
 
 **PC->USB->PIC** 
-- [ ] Not Completed 
+- [ ] Doing 
 
 PIC controller der kan modtage og sende data gennem en UART port forbundet med computeren
 
