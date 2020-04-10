@@ -1,4 +1,4 @@
-# 1 "lcd_display.c"
+# 1 "i2c_classes.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,9 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "lcd_display.c" 2
-
-# 1 "./lcd_display.h" 1
+# 1 "i2c_classes.c" 2
+# 1 "./i2c_classes.h" 1
 
 
 
@@ -3166,7 +3165,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
-# 4 "./lcd_display.h" 2
+# 4 "./i2c_classes.h" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 1 3
 # 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 3
@@ -3251,146 +3250,31 @@ typedef int32_t int_fast32_t;
 typedef uint32_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 139 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 2 3
-# 5 "./lcd_display.h" 2
+# 5 "./i2c_classes.h" 2
+
+
 
 
 typedef struct {
+    uint8_t addr;
+    struct {
+        uint8_t value[32];
+        uint8_t index;
+    } data;
 
+} i2c_package_t;
 
-    union {
-        struct {
-            unsigned sleep : 1;
-        };
-    } int_flag_t;
-} lcd_display_t;
+const i2c_package_t I2C_PACKAGE_EMPTY;
 
+volatile i2c_package_t I2C_PACKAGE;
+volatile i2c_package_t MASKED_I2C_PACKAGE;
 
-void lcd_display_init(void);
+typedef struct {
+    uint8_t command;
 
-void lcd_display_clear(void);
-void lcd_display_set_cursor(char a, char b);
+    uint8_t parameters[32];
+    uint8_t parameter_index;
 
-void lcd_display_write_char(char a);
-void lcd_display_write_string(char *a);
+}i2c_command_t;
+# 1 "i2c_classes.c" 2
 
-void lcd_display_shift_right(void);
-void lcd_display_shift_left(void);
-# 2 "lcd_display.c" 2
-
-# 1 "./global.h" 1
-# 3 "lcd_display.c" 2
-
-
-
-void lcd_display_port(char a)
-{
- if(a & 1)
-  LATA0 = 1;
- else
-  LATA0 = 0;
-
- if(a & 2)
-  LATA1 = 1;
- else
-  LATA1 = 0;
-
- if(a & 4)
-  LATA2 = 1;
- else
-  LATA2 = 0;
-
- if(a & 8)
-  LATA3 = 1;
- else
-  LATA3 = 0;
-}
-
-void lcd_display_cmd(char a)
-{
-    LATB1 = 0;
- lcd_display_port(a);
- LATB0 = 1;
-    _delay((unsigned long)((4)*(8000000/4000.0)));
-    LATB0 = 0;
-}
-
-void lcd_display_clear(void)
-{
- lcd_display_cmd(0);
- lcd_display_cmd(1);
-}
-
-void lcd_display_set_cursor(char a, char b)
-{
- char temp,z,y;
- if(a == 1)
- {
-   temp = 0x80 + b - 1;
-  z = temp>>4;
-  y = temp & 0x0F;
-  lcd_display_cmd(z);
-  lcd_display_cmd(y);
- }
- else if(a == 2)
- {
-  temp = 0xC0 + b - 1;
-  z = temp>>4;
-  y = temp & 0x0F;
-  lcd_display_cmd(z);
-  lcd_display_cmd(y);
- }
-}
-
-void lcd_display_init(void)
-{
-    lcd_display_port(0x00);
-    _delay((unsigned long)((20)*(8000000/4000.0)));
-    lcd_display_cmd(0x03);
-    _delay((unsigned long)((5)*(8000000/4000.0)));
-    lcd_display_cmd(0x03);
-    _delay((unsigned long)((11)*(8000000/4000.0)));
-    lcd_display_cmd(0x03);
-
-    lcd_display_cmd(0x02);
-    lcd_display_cmd(0x02);
-    lcd_display_cmd(0x08);
-    lcd_display_cmd(0x00);
-    lcd_display_cmd(0x0C);
-    lcd_display_cmd(0x00);
-    lcd_display_cmd(0x06);
-}
-
-void lcd_display_write_char(char a)
-{
-    char temp,y;
-    temp = a&0x0F;
-    y = a&0xF0;
-    LATB1 = 1;
-    lcd_display_port(y>>4);
-    LATB0 = 1;
-    _delay((unsigned long)((40)*(8000000/4000000.0)));
-    LATB0 = 0;
-    lcd_display_port(temp);
-    LATB0 = 1;
-    _delay((unsigned long)((40)*(8000000/4000000.0)));
-    LATB0 = 0;
-}
-
-void lcd_display_write_string(char *a)
-{
- int i;
- for(i=0;a[i]!='\0';i++)
-    lcd_display_write_char(a[i]);
-}
-
-void lcd_display_shift_right(void)
-{
- lcd_display_cmd(0x01);
- lcd_display_cmd(0x0C);
-}
-
-void lcd_display_shift_left(void)
-{
- lcd_display_cmd(0x01);
- lcd_display_cmd(0x08);
-}

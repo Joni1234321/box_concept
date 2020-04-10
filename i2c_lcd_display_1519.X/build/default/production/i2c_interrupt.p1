@@ -1,16 +1,20 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"7 ./i2c_interrupt.h
-[; ;./i2c_interrupt.h: 7: typedef struct {
-[s S254 `uc 1 `uc 1 ]
+"11 ./i2c_classes.h
+[; ;./i2c_classes.h: 11:     struct {
+[s S255 `uc -> 32 `i `uc 1 ]
+[n S255 . value index ]
+"9
+[; ;./i2c_classes.h: 9: typedef struct {
+[s S254 `uc 1 `S255 1 ]
 [n S254 . addr data ]
 "11 ./interrupt.h
 [; ;./interrupt.h: 11:     struct {
-[s S256 :1 `uc 1 ]
-[n S256 . update_lcd_display ]
+[s S258 :1 `uc 1 ]
+[n S258 . update_lcd_display ]
 "10
 [; ;./interrupt.h: 10: typedef union {
-[u S255 `S256 1 ]
-[n S255 . . ]
+[u S257 `S258 1 ]
+[n S257 . . ]
 "5401 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1519.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1519.h: 5401: extern volatile __bit SSPIF __attribute__((address(0x8B)));
 [v _SSPIF `Vb ~T0 @X0 0 e@139 ]
@@ -47,6 +51,35 @@ Version 4.0 HI-TECH Software Intermediate Code
 "4672
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1519.h: 4672: extern volatile __bit ACKSTAT __attribute__((address(0x10B6)));
 [v _ACKSTAT `Vb ~T0 @X0 0 e@4278 ]
+"3431
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1519.h: 3431:     struct {
+[s S189 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S189 . BF UA R_nW S P D_nA CKE SMP ]
+"3430
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1519.h: 3430: typedef union {
+[u S188 `S189 1 ]
+[n S188 . . ]
+"3442
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1519.h: 3442: extern volatile SSPSTATbits_t SSPSTATbits __attribute__((address(0x214)));
+[v _SSPSTATbits `VS188 ~T0 @X0 0 e@532 ]
+"8 i2c_interrupt.c
+[; ;i2c_interrupt.c: 8: void update_i2c_related_variables(i2c_package_t package);
+[v _update_i2c_related_variables `(v ~T0 @X0 0 ef1`S254 ]
+"2150 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1519.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1519.h: 2150:     struct {
+[s S110 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S110 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
+"2149
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1519.h: 2149: typedef union {
+[u S109 `S110 1 ]
+[n S109 . . ]
+"2161
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1519.h: 2161: extern volatile LATCbits_t LATCbits __attribute__((address(0x10E)));
+[v _LATCbits `VS109 ~T0 @X0 0 e@270 ]
+"23 ./i2c_classes.h
+[; ;./i2c_classes.h: 23: typedef struct {
+[s S256 `uc 1 `uc -> 32 `i `uc 1 ]
+[n S256 . command parameters parameter_index ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1519.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1519.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -398,207 +431,304 @@ Version 4.0 HI-TECH Software Intermediate Code
 "4636
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1519.h: 4636: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"11 ./i2c_interrupt.h
-[; ;./i2c_interrupt.h: 11: volatile i2c_package_t I2C_PACKAGE;
+"18 ./i2c_classes.h
+[; ;./i2c_classes.h: 18: const i2c_package_t I2C_PACKAGE_EMPTY;
+[v _I2C_PACKAGE_EMPTY `CS254 ~T0 @X0 1 e ]
+[i _I2C_PACKAGE_EMPTY
+:U ..
+:U ..
+-> -> 0 `i `uc
+:U ..
+:U ..
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+-> -> 0 `i `uc
+..
+..
+..
+..
+]
+"20
+[; ;./i2c_classes.h: 20: volatile i2c_package_t I2C_PACKAGE;
 [v _I2C_PACKAGE `VS254 ~T0 @X0 1 e ]
-"12
-[; ;./i2c_interrupt.h: 12: volatile i2c_package_t MASKED_I2C_PACKAGE;
+"21
+[; ;./i2c_classes.h: 21: volatile i2c_package_t MASKED_I2C_PACKAGE;
 [v _MASKED_I2C_PACKAGE `VS254 ~T0 @X0 1 e ]
 "16 ./interrupt.h
 [; ;./interrupt.h: 16: volatile int_flag_t INT_FLAGS;
-[v _INT_FLAGS `VS255 ~T0 @X0 1 e ]
-"5 i2c_interrupt.c
-[; ;i2c_interrupt.c: 5: uint8_t i2c_addr = 0x00;
-[v _i2c_addr `uc ~T0 @X0 1 e ]
-[i _i2c_addr
--> -> 0 `i `uc
-]
-"6
-[; ;i2c_interrupt.c: 6: uint8_t i2c_data = 0x00;
-[v _i2c_data `uc ~T0 @X0 1 e ]
-[i _i2c_data
--> -> 0 `i `uc
-]
-"8
-[; ;i2c_interrupt.c: 8: void on_interrupt_i2c (void)
+[v _INT_FLAGS `VS257 ~T0 @X0 1 e ]
+"11 i2c_interrupt.c
+[; ;i2c_interrupt.c: 11: i2c_package_t current_package;
+[v _current_package `S254 ~T0 @X0 1 e ]
+"12
+[; ;i2c_interrupt.c: 12: void on_interrupt_i2c (void)
 [v _on_interrupt_i2c `(v ~T0 @X0 1 ef ]
-"9
-[; ;i2c_interrupt.c: 9: {
+"13
+[; ;i2c_interrupt.c: 13: {
 {
 [e :U _on_interrupt_i2c ]
 [f ]
-"10
-[; ;i2c_interrupt.c: 10:     SSPIF = 0;
-[e = _SSPIF -> -> 0 `i `b ]
-"11
-[; ;i2c_interrupt.c: 11:     CKP = 0;
-[e = _CKP -> -> 0 `i `b ]
 "14
-[; ;i2c_interrupt.c: 14:     if ((SSPCONbits.SSPOV) || (SSPCONbits.WCOL))
-[e $ ! || != -> . . _SSPCONbits 0 3 `i -> 0 `i != -> . . _SSPCONbits 0 4 `i -> 0 `i 258  ]
+[; ;i2c_interrupt.c: 14:     SSPIF = 0;
+[e = _SSPIF -> -> 0 `i `b ]
 "15
-[; ;i2c_interrupt.c: 15:     {
-{
-"16
-[; ;i2c_interrupt.c: 16:       i2c_addr = SSPBUF;
-[e = _i2c_addr _SSPBUF ]
-"17
-[; ;i2c_interrupt.c: 17:       SSPCONbits.SSPOV = 0;
-[e = . . _SSPCONbits 0 3 -> -> 0 `i `uc ]
+[; ;i2c_interrupt.c: 15:     CKP = 0;
+[e = _CKP -> -> 0 `i `b ]
 "18
-[; ;i2c_interrupt.c: 18:       SSPCONbits.WCOL = 0;
-[e = . . _SSPCONbits 0 4 -> -> 0 `i `uc ]
+[; ;i2c_interrupt.c: 18:     if ((SSPCONbits.SSPOV) || (SSPCONbits.WCOL))
+[e $ ! || != -> . . _SSPCONbits 0 3 `i -> 0 `i != -> . . _SSPCONbits 0 4 `i -> 0 `i 260  ]
 "19
-[; ;i2c_interrupt.c: 19:       SSPCONbits.CKP = 1;
-[e = . . _SSPCONbits 0 1 -> -> 1 `i `uc ]
+[; ;i2c_interrupt.c: 19:     {
+{
 "20
-[; ;i2c_interrupt.c: 20:     }
-}
-[e :U 258 ]
+[; ;i2c_interrupt.c: 20:       current_package.addr = SSPBUF;
+[e = . _current_package 0 _SSPBUF ]
+"21
+[; ;i2c_interrupt.c: 21:       SSPCONbits.SSPOV = 0;
+[e = . . _SSPCONbits 0 3 -> -> 0 `i `uc ]
+"22
+[; ;i2c_interrupt.c: 22:       SSPCONbits.WCOL = 0;
+[e = . . _SSPCONbits 0 4 -> -> 0 `i `uc ]
 "23
-[; ;i2c_interrupt.c: 23:     if(!D_nA && !R_nW)
-[e $ ! && ! _D_nA ! _R_nW 259  ]
+[; ;i2c_interrupt.c: 23:       SSPCONbits.CKP = 1;
+[e = . . _SSPCONbits 0 1 -> -> 1 `i `uc ]
 "24
-[; ;i2c_interrupt.c: 24:     {
-{
-"25
-[; ;i2c_interrupt.c: 25:         i2c_addr = SSPBUF;
-[e = _i2c_addr _SSPBUF ]
-"26
-[; ;i2c_interrupt.c: 26:         while(BF);
-[e $U 260  ]
-[e :U 261 ]
+[; ;i2c_interrupt.c: 24:     }
+}
 [e :U 260 ]
-[e $ _BF 261  ]
-[e :U 262 ]
 "27
-[; ;i2c_interrupt.c: 27:         CKP = 1;
-[e = _CKP -> -> 1 `i `b ]
+[; ;i2c_interrupt.c: 27:     if(!D_nA && !R_nW)
+[e $ ! && ! _D_nA ! _R_nW 261  ]
+"28
+[; ;i2c_interrupt.c: 28:     {
+{
 "29
-[; ;i2c_interrupt.c: 29:     }
-}
-[e :U 259 ]
+[; ;i2c_interrupt.c: 29:         current_package.addr = SSPBUF;
+[e = . _current_package 0 _SSPBUF ]
 "30
-[; ;i2c_interrupt.c: 30:     if (D_nA && !R_nW)
-[e $ ! && _D_nA ! _R_nW 263  ]
-"31
-[; ;i2c_interrupt.c: 31:     {
-{
-"32
-[; ;i2c_interrupt.c: 32:         i2c_data = SSPBUF;
-[e = _i2c_data _SSPBUF ]
-"33
-[; ;i2c_interrupt.c: 33:         while(BF);
-[e $U 264  ]
-[e :U 265 ]
-[e :U 264 ]
-[e $ _BF 265  ]
-[e :U 266 ]
-"34
-[; ;i2c_interrupt.c: 34:         CKP = 1;
-[e = _CKP -> -> 1 `i `b ]
-"35
-[; ;i2c_interrupt.c: 35:     }
-}
+[; ;i2c_interrupt.c: 30:         while(BF);
+[e $U 262  ]
 [e :U 263 ]
-"38
-[; ;i2c_interrupt.c: 38:     if(!D_nA && R_nW)
-[e $ ! && ! _D_nA _R_nW 267  ]
-"39
-[; ;i2c_interrupt.c: 39:     {
+[e :U 262 ]
+[e $ _BF 263  ]
+[e :U 264 ]
+"31
+[; ;i2c_interrupt.c: 31:         CKP = 1;
+[e = _CKP -> -> 1 `i `b ]
+"32
+[; ;i2c_interrupt.c: 32:     }
+}
+[e :U 261 ]
+"33
+[; ;i2c_interrupt.c: 33:     if (D_nA && !R_nW)
+[e $ ! && _D_nA ! _R_nW 265  ]
+"34
+[; ;i2c_interrupt.c: 34:     {
 {
-"40
-[; ;i2c_interrupt.c: 40:         i2c_addr = SSPBUF;
-[e = _i2c_addr _SSPBUF ]
-"41
-[; ;i2c_interrupt.c: 41:         while(BF);
-[e $U 268  ]
-[e :U 269 ]
+"35
+[; ;i2c_interrupt.c: 35:         current_package.data.value[current_package.data.index] = SSPBUF;
+[e = *U + &U . . _current_package 1 0 * -> . . _current_package 1 1 `ux -> -> # *U &U . . _current_package 1 0 `ui `ux _SSPBUF ]
+"36
+[; ;i2c_interrupt.c: 36:         current_package.data.index++;
+[e ++ . . _current_package 1 1 -> -> 1 `i `uc ]
+"37
+[; ;i2c_interrupt.c: 37:         while(BF);
+[e $U 266  ]
+[e :U 267 ]
+[e :U 266 ]
+[e $ _BF 267  ]
 [e :U 268 ]
-[e $ _BF 269  ]
-[e :U 270 ]
+"38
+[; ;i2c_interrupt.c: 38:         CKP = 1;
+[e = _CKP -> -> 1 `i `b ]
+"39
+[; ;i2c_interrupt.c: 39:     }
+}
+[e :U 265 ]
 "42
-[; ;i2c_interrupt.c: 42:         SSPBUF = 0x54;
-[e = _SSPBUF -> -> 84 `i `uc ]
+[; ;i2c_interrupt.c: 42:     if(!D_nA && R_nW)
+[e $ ! && ! _D_nA _R_nW 269  ]
 "43
-[; ;i2c_interrupt.c: 43:         while (SSPIF);
-[e $U 271  ]
-[e :U 272 ]
-[e :U 271 ]
-[e $ _SSPIF 272  ]
-[e :U 273 ]
-"45
-[; ;i2c_interrupt.c: 45:         while (!ACKSTAT) {
-[e $U 274  ]
-[e :U 275 ]
+[; ;i2c_interrupt.c: 43:     {
 {
+"44
+[; ;i2c_interrupt.c: 44:         current_package.addr = SSPBUF;
+[e = . _current_package 0 _SSPBUF ]
+"45
+[; ;i2c_interrupt.c: 45:         while(BF);
+[e $U 270  ]
+[e :U 271 ]
+[e :U 270 ]
+[e $ _BF 271  ]
+[e :U 272 ]
 "46
-[; ;i2c_interrupt.c: 46:             SSPBUF = 0x54;
+[; ;i2c_interrupt.c: 46:         SSPBUF = 0x54;
 [e = _SSPBUF -> -> 84 `i `uc ]
 "47
-[; ;i2c_interrupt.c: 47:             while (SSPIF);
-[e $U 277  ]
-[e :U 278 ]
-[e :U 277 ]
-[e $ _SSPIF 278  ]
-[e :U 279 ]
-"48
-[; ;i2c_interrupt.c: 48:         }
-}
+[; ;i2c_interrupt.c: 47:         while (SSPIF);
+[e $U 273  ]
 [e :U 274 ]
-"45
-[; ;i2c_interrupt.c: 45:         while (!ACKSTAT) {
-[e $ ! _ACKSTAT 275  ]
+[e :U 273 ]
+[e $ _SSPIF 274  ]
+[e :U 275 ]
+"49
+[; ;i2c_interrupt.c: 49:         while (!ACKSTAT) {
+[e $U 276  ]
+[e :U 277 ]
+{
+"50
+[; ;i2c_interrupt.c: 50:             SSPBUF = 0x54;
+[e = _SSPBUF -> -> 84 `i `uc ]
+"51
+[; ;i2c_interrupt.c: 51:             while (SSPIF);
+[e $U 279  ]
+[e :U 280 ]
+[e :U 279 ]
+[e $ _SSPIF 280  ]
+[e :U 281 ]
+"52
+[; ;i2c_interrupt.c: 52:         }
+}
 [e :U 276 ]
 "49
-[; ;i2c_interrupt.c: 49:         CKP = 1;
-[e = _CKP -> -> 1 `i `b ]
-"50
-[; ;i2c_interrupt.c: 50:     }
-}
-[e :U 267 ]
-"51
-[; ;i2c_interrupt.c: 51:     if (D_nA && R_nW)
-[e $ ! && _D_nA _R_nW 280  ]
-"52
-[; ;i2c_interrupt.c: 52:     {
-{
+[; ;i2c_interrupt.c: 49:         while (!ACKSTAT) {
+[e $ ! _ACKSTAT 277  ]
+[e :U 278 ]
 "53
-[; ;i2c_interrupt.c: 53:         uint8_t bp_test_var = 0;
+[; ;i2c_interrupt.c: 53:         CKP = 1;
+[e = _CKP -> -> 1 `i `b ]
+"54
+[; ;i2c_interrupt.c: 54:     }
+}
+[e :U 269 ]
+"55
+[; ;i2c_interrupt.c: 55:     if (D_nA && R_nW)
+[e $ ! && _D_nA _R_nW 282  ]
+"56
+[; ;i2c_interrupt.c: 56:     {
+{
+"57
+[; ;i2c_interrupt.c: 57:         uint8_t bp_test_var = 0;
 [v _bp_test_var `uc ~T0 @X0 1 a ]
 [e = _bp_test_var -> -> 0 `i `uc ]
-"54
-[; ;i2c_interrupt.c: 54:         CKP = 1;
+"58
+[; ;i2c_interrupt.c: 58:         CKP = 1;
 [e = _CKP -> -> 1 `i `b ]
-"55
-[; ;i2c_interrupt.c: 55:     }
-}
-[e :U 280 ]
 "59
-[; ;i2c_interrupt.c: 59:     MASKED_I2C_PACKAGE = I2C_PACKAGE;
-[e = _MASKED_I2C_PACKAGE _I2C_PACKAGE ]
-"60
-[; ;i2c_interrupt.c: 60:     I2C_PACKAGE.addr = i2c_addr;
-[e = . _I2C_PACKAGE 0 _i2c_addr ]
-"61
-[; ;i2c_interrupt.c: 61:     I2C_PACKAGE.data = i2c_data;
-[e = . _I2C_PACKAGE 1 _i2c_data ]
-"62
-[; ;i2c_interrupt.c: 62:     INT_FLAGS.update_lcd_display = 1;
-[e = . . _INT_FLAGS 0 0 -> -> 1 `i `uc ]
-"63
-[; ;i2c_interrupt.c: 63: }
-[e :UE 257 ]
+[; ;i2c_interrupt.c: 59:     }
 }
-"64
-[; ;i2c_interrupt.c: 64: void update_i2c_related_variables()
-[v _update_i2c_related_variables `(v ~T0 @X0 1 ef ]
+[e :U 282 ]
+"62
+[; ;i2c_interrupt.c: 62:     if (SSPSTATbits.P)
+[e $ ! != -> . . _SSPSTATbits 0 4 `i -> 0 `i 283  ]
+"63
+[; ;i2c_interrupt.c: 63:     {
+{
 "65
-[; ;i2c_interrupt.c: 65: {
+[; ;i2c_interrupt.c: 65:         update_i2c_related_variables(current_package);
+[e ( _update_i2c_related_variables (1 _current_package ]
+"66
+[; ;i2c_interrupt.c: 66:         current_package = I2C_PACKAGE_EMPTY;
+[e = _current_package _I2C_PACKAGE_EMPTY ]
+"68
+[; ;i2c_interrupt.c: 68:         CKP = 1;
+[e = _CKP -> -> 1 `i `b ]
+"69
+[; ;i2c_interrupt.c: 69:     }
+}
+[e :U 283 ]
+"70
+[; ;i2c_interrupt.c: 70: }
+[e :UE 259 ]
+}
+"72
+[; ;i2c_interrupt.c: 72: void update_i2c_related_variables(i2c_package_t package)
+[v _update_i2c_related_variables `(v ~T0 @X0 1 ef1`S254 ]
+"73
+[; ;i2c_interrupt.c: 73: {
 {
 [e :U _update_i2c_related_variables ]
+"72
+[; ;i2c_interrupt.c: 72: void update_i2c_related_variables(i2c_package_t package)
+[v _package `S254 ~T0 @X0 1 r1 ]
+"73
+[; ;i2c_interrupt.c: 73: {
 [f ]
-"67
-[; ;i2c_interrupt.c: 67: }
-[e :UE 281 ]
+"74
+[; ;i2c_interrupt.c: 74:     LATCbits.LATC7 ^= 1;
+[e =^ . . _LATCbits 0 7 -> -> 1 `i `Vuc ]
+"76
+[; ;i2c_interrupt.c: 76:     MASKED_I2C_PACKAGE = I2C_PACKAGE;
+[e = _MASKED_I2C_PACKAGE _I2C_PACKAGE ]
+"77
+[; ;i2c_interrupt.c: 77:     I2C_PACKAGE = package;
+[e = _I2C_PACKAGE _package ]
+"79
+[; ;i2c_interrupt.c: 79:     INT_FLAGS.update_lcd_display = 1;
+[e = . . _INT_FLAGS 0 0 -> -> 1 `i `uc ]
+"80
+[; ;i2c_interrupt.c: 80: }
+[e :UE 284 ]
+}
+"84
+[; ;i2c_interrupt.c: 84: void i2c_data_handler()
+[v _i2c_data_handler `(v ~T0 @X0 1 ef ]
+"85
+[; ;i2c_interrupt.c: 85: {
+{
+[e :U _i2c_data_handler ]
+[f ]
+"87
+[; ;i2c_interrupt.c: 87: }
+[e :UE 285 ]
+}
+"89
+[; ;i2c_interrupt.c: 89: void add_data_to_stack(i2c_command_t *command, uint8_t data)
+[v _add_data_to_stack `(v ~T0 @X0 1 ef2`*S256`uc ]
+"90
+[; ;i2c_interrupt.c: 90: {
+{
+[e :U _add_data_to_stack ]
+"89
+[; ;i2c_interrupt.c: 89: void add_data_to_stack(i2c_command_t *command, uint8_t data)
+[v _command `*S256 ~T0 @X0 1 r1 ]
+[v _data `uc ~T0 @X0 1 r2 ]
+"90
+[; ;i2c_interrupt.c: 90: {
+[f ]
+"92
+[; ;i2c_interrupt.c: 92: }
+[e :UE 286 ]
 }

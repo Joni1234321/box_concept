@@ -4,12 +4,15 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <logicalFolder name="f1" displayName="New Folder 1" projectFiles="true">
+      </logicalFolder>
       <itemPath>config.h</itemPath>
       <itemPath>global.h</itemPath>
       <itemPath>init.h</itemPath>
       <itemPath>interrupt.h</itemPath>
       <itemPath>lcd_display.h</itemPath>
       <itemPath>i2c_interrupt.h</itemPath>
+      <itemPath>i2c_classes.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -23,6 +26,7 @@
       <itemPath>interrupt.c</itemPath>
       <itemPath>lcd_display.c</itemPath>
       <itemPath>i2c_interrupt.c</itemPath>
+      <itemPath>i2c_classes.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

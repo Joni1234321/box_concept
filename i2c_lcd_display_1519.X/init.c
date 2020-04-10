@@ -68,8 +68,8 @@ void init_i2c (void)
     // <0>  = 1     : Enable clock stretching
     SSPCON2 = 0x01;
      
-    // Nothing Changed
-    SSPCON3 = 0x00;
+    // <6> Enable stop bit interrupt PCIE
+    SSPCON3 = 0b00000000;
     
     // Set slave address
     SSPADD = 0x30;

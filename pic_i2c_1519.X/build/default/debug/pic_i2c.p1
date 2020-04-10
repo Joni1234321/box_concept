@@ -27,7 +27,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v __delay `JF1772 ~T0 @X0 0 e ]
 [p i __delay ]
 "7 ./i2c_master.h
-[; ;./i2c_master.h: 7: void i2c_master_send (uint8_t bus_add, uint8_t data);
+[; ;./i2c_master.h: 7: void i2c_master_send (uint8_t i2c_add, uint8_t data);
 [v _i2c_master_send `(v ~T0 @X0 0 ef2`uc`uc ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1519.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1519.h: 54: __asm("INDF0 equ 00h");
@@ -425,33 +425,40 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17
 [; ;pic_i2c.c: 17:     init();
 [e ( _init ..  ]
-"18
-[; ;pic_i2c.c: 18:     LATCbits.LATC7 = 1;
+"19
+[; ;pic_i2c.c: 19:     LATCbits.LATC7 = 1;
 [e = . . _LATCbits 0 7 -> -> 1 `i `uc ]
-"21
-[; ;pic_i2c.c: 21:     for(;;) {
+"20
+[; ;pic_i2c.c: 20:     char data = '0';
+[v _data `uc ~T0 @X0 1 a ]
+[e = _data -> -> 48 `ui `uc ]
+"23
+[; ;pic_i2c.c: 23:     for(;;) {
 {
 [e :U 257 ]
 {
-"22
-[; ;pic_i2c.c: 22:         _delay((unsigned long)((3000)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"23
-[; ;pic_i2c.c: 23:         i2c_master_send(0x30, 'a');
-[e ( _i2c_master_send (2 , -> -> 48 `i `uc -> -> 97 `ui `uc ]
 "24
 [; ;pic_i2c.c: 24:         LATCbits.LATC7 ^= 1;
 [e =^ . . _LATCbits 0 7 -> -> 1 `i `Vuc ]
-"25
-[; ;pic_i2c.c: 25:     }
+"26
+[; ;pic_i2c.c: 26:         _delay((unsigned long)((3000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"27
+[; ;pic_i2c.c: 27:         i2c_master_send(0x30, data);
+[e ( _i2c_master_send (2 , -> -> 48 `i `uc -> _data `uc ]
+"28
+[; ;pic_i2c.c: 28:         data++;
+[e ++ _data -> -> 1 `i `uc ]
+"29
+[; ;pic_i2c.c: 29:     }
 }
 [e $U 257  ]
 [e :U 258 ]
 }
-"26
-[; ;pic_i2c.c: 26:     return;
+"30
+[; ;pic_i2c.c: 30:     return;
 [e $UE 256  ]
-"27
-[; ;pic_i2c.c: 27: }
+"31
+[; ;pic_i2c.c: 31: }
 [e :UE 256 ]
 }

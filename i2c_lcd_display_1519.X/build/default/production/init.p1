@@ -631,7 +631,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;init.c: 69:     SSPCON2 = 0x01;
 [e = _SSPCON2 -> -> 1 `i `uc ]
 "72
-[; ;init.c: 72:     SSPCON3 = 0x00;
+[; ;init.c: 72:     SSPCON3 = 0b00000000;
 [e = _SSPCON3 -> -> 0 `i `uc ]
 "75
 [; ;init.c: 75:     SSPADD = 0x30;

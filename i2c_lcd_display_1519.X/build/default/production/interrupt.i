@@ -3266,12 +3266,37 @@ typedef uint32_t uint_fast32_t;
 
 
 
+# 1 "./i2c_classes.h" 1
+
+
+
+
+
+
+
+
 typedef struct {
     uint8_t addr;
-    uint8_t data;
+    struct {
+        uint8_t value[32];
+        uint8_t index;
+    } data;
+
 } i2c_package_t;
+
+const i2c_package_t I2C_PACKAGE_EMPTY;
+
 volatile i2c_package_t I2C_PACKAGE;
 volatile i2c_package_t MASKED_I2C_PACKAGE;
+
+typedef struct {
+    uint8_t command;
+
+    uint8_t parameters[32];
+    uint8_t parameter_index;
+
+}i2c_command_t;
+# 7 "./i2c_interrupt.h" 2
 
 
 void on_interrupt_i2c (void);

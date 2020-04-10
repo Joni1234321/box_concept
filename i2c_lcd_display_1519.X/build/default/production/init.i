@@ -3239,7 +3239,7 @@ void init_i2c (void)
     SSPCON2 = 0x01;
 
 
-    SSPCON3 = 0x00;
+    SSPCON3 = 0b00000000;
 
 
     SSPADD = 0x30;

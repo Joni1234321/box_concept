@@ -17,14 +17,14 @@ void main()
     init();
     
     DEBUG_PIN = 1;
-    char data = '0';
+    uint8_t* data = "Hej med dig :)  Meget sjovt";
     
     // main loop
     for(;;) {  
+        DEBUG_PIN ^= 1;
+
         __delay_ms (3000);
         i2c_master_send(0x30, data);
-        DEBUG_PIN ^= 1;
-        data++;
     }
     return;
 }

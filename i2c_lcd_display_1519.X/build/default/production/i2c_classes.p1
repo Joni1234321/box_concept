@@ -1,53 +1,12 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"9 ./interrupt.h
-[; ;./interrupt.h: 9:     struct {
-[s S255 :1 `uc 1 ]
-[n S255 . update_lcd_display ]
-"8
-[; ;./interrupt.h: 8: typedef union {
-[u S254 `S255 1 ]
-[n S254 . . ]
-"15
-[; ;./interrupt.h: 15: typedef struct {
-[s S256 `uc 1 `uc 1 ]
-[n S256 . d data ]
-"11 ./lcd_display.h
-[; ;./lcd_display.h: 11:         struct {
-[s S259 :1 `uc 1 ]
-[n S259 . sleep ]
-"10
-[; ;./lcd_display.h: 10:     union {
-[u S258 `S259 1 ]
-[n S258 . . ]
-"7
-[; ;./lcd_display.h: 7: typedef struct {
-[s S257 `S258 1 ]
-[n S257 . int_flag_t ]
-[p mainexit ]
-"4 ./init.h
-[; ;./init.h: 4: void init (void);
-[v _init `(v ~T0 @X0 0 ef ]
-"18 ./lcd_display.h
-[; ;./lcd_display.h: 18: void lcd_display_init(void);
-[v _lcd_display_init `(v ~T0 @X0 0 ef ]
-"20
-[; ;./lcd_display.h: 20: void lcd_display_clear(void);
-[v _lcd_display_clear `(v ~T0 @X0 0 ef ]
-"21
-[; ;./lcd_display.h: 21: void lcd_display_set_cursor(char a, char b);
-[v _lcd_display_set_cursor `(v ~T0 @X0 0 ef2`uc`uc ]
-"24
-[; ;./lcd_display.h: 24: void lcd_display_write_string(char *a);
-[v _lcd_display_write_string `(v ~T0 @X0 0 ef1`*uc ]
-"15 i2c_lcd_display_1519.c
-[; ;i2c_lcd_display_1519.c: 15: void update_if_flag_set (void);
-[v _update_if_flag_set `(v ~T0 @X0 0 ef ]
-"34
-[; ;i2c_lcd_display_1519.c: 34: void update_display (void);
-[v _update_display `(v ~T0 @X0 0 ef ]
-"23 ./lcd_display.h
-[; ;./lcd_display.h: 23: void lcd_display_write_char(char a);
-[v _lcd_display_write_char `(v ~T0 @X0 0 ef1`uc ]
+"11 ./i2c_classes.h
+[; ;./i2c_classes.h: 11:     struct {
+[s S255 `uc -> 32 `i `uc 1 ]
+[n S255 . value index ]
+"9
+[; ;./i2c_classes.h: 9: typedef struct {
+[s S254 `uc 1 `S255 1 ]
+[n S254 . addr data ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1519.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1519.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -399,186 +358,58 @@ Version 4.0 HI-TECH Software Intermediate Code
 "4636
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1519.h: 4636: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"5 ./config.h
-[p x FOSC = INTOSC ]
-"6
-[p x WDTE = OFF ]
-"7
-[p x PWRTE = OFF ]
-"8
-[p x MCLRE = ON ]
-"9
-[p x CP = OFF ]
-"10
-[p x BOREN = ON ]
-"11
-[p x CLKOUTEN = OFF ]
-"12
-[p x IESO = ON ]
-"13
-[p x FCMEN = ON ]
-"16
-[p x WRT = OFF ]
-"17
-[p x VCAPEN = OFF ]
-"18
-[p x STVREN = ON ]
-"19
-[p x BORV = LO ]
+"18 ./i2c_classes.h
+[; ;./i2c_classes.h: 18: const i2c_package_t I2C_PACKAGE_EMPTY;
+[v _I2C_PACKAGE_EMPTY `CS254 ~T0 @X0 1 e ]
+[i _I2C_PACKAGE_EMPTY
+:U ..
+:U ..
+-> -> 0 `i `uc
+:U ..
+:U ..
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+-> -> 0 `i `uc
+..
+..
+..
+..
+]
 "20
-[p x LPBOR = OFF ]
+[; ;./i2c_classes.h: 20: volatile i2c_package_t I2C_PACKAGE;
+[v _I2C_PACKAGE `VS254 ~T0 @X0 1 e ]
 "21
-[p x LVP = OFF ]
-"13 ./interrupt.h
-[; ;./interrupt.h: 13: volatile int_flag_t INT_FLAGS;
-[v _INT_FLAGS `VS254 ~T0 @X0 1 e ]
-"19
-[; ;./interrupt.h: 19: volatile i2c_vars_t I2C_VARS;
-[v _I2C_VARS `VS256 ~T0 @X0 1 e ]
-"13 i2c_lcd_display_1519.c
-[; ;i2c_lcd_display_1519.c: 13: lcd_display_t display;
-[v _display `S257 ~T0 @X0 1 e ]
-[v $root$_main `(v ~T0 @X0 0 e ]
-"16
-[; ;i2c_lcd_display_1519.c: 16: void main()
-[v _main `(v ~T0 @X0 1 ef ]
-"17
-[; ;i2c_lcd_display_1519.c: 17: {
-{
-[e :U _main ]
-[f ]
-"19
-[; ;i2c_lcd_display_1519.c: 19:     init();
-[e ( _init ..  ]
-"21
-[; ;i2c_lcd_display_1519.c: 21:     lcd_display_init();
-[e ( _lcd_display_init ..  ]
-"23
-[; ;i2c_lcd_display_1519.c: 23:     lcd_display_clear();
-[e ( _lcd_display_clear ..  ]
-"24
-[; ;i2c_lcd_display_1519.c: 24:     lcd_display_set_cursor(1,1);
-[e ( _lcd_display_set_cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
-"25
-[; ;i2c_lcd_display_1519.c: 25:     lcd_display_write_string("Waiting ...");
-[e ( _lcd_display_write_string (1 :s 1C ]
-"28
-[; ;i2c_lcd_display_1519.c: 28:     for(;;) {
-{
-[e :U 261 ]
-{
-"29
-[; ;i2c_lcd_display_1519.c: 29:         update_if_flag_set();
-[e ( _update_if_flag_set ..  ]
-"30
-[; ;i2c_lcd_display_1519.c: 30:     }
-}
-[e $U 261  ]
-[e :U 262 ]
-}
-"31
-[; ;i2c_lcd_display_1519.c: 31:     return;
-[e $UE 260  ]
-"32
-[; ;i2c_lcd_display_1519.c: 32: }
-[e :UE 260 ]
-}
-"35
-[; ;i2c_lcd_display_1519.c: 35: void update_if_flag_set (void)
-[v _update_if_flag_set `(v ~T0 @X0 1 ef ]
-"36
-[; ;i2c_lcd_display_1519.c: 36: {
-{
-[e :U _update_if_flag_set ]
-[f ]
-"37
-[; ;i2c_lcd_display_1519.c: 37:     if (INT_FLAGS.update_lcd_display){
-[e $ ! != -> . . _INT_FLAGS 0 0 `i -> 0 `i 265  ]
-{
-"38
-[; ;i2c_lcd_display_1519.c: 38:         INT_FLAGS.update_lcd_display = 0;
-[e = . . _INT_FLAGS 0 0 -> -> 0 `i `uc ]
-"39
-[; ;i2c_lcd_display_1519.c: 39:         update_display();
-[e ( _update_display ..  ]
-"40
-[; ;i2c_lcd_display_1519.c: 40:     }
-}
-[e :U 265 ]
-"41
-[; ;i2c_lcd_display_1519.c: 41: }
-[e :UE 264 ]
-}
-"43
-[; ;i2c_lcd_display_1519.c: 43: void update_display(void)
-[v _update_display `(v ~T0 @X0 1 ef ]
-"44
-[; ;i2c_lcd_display_1519.c: 44: {
-{
-[e :U _update_display ]
-[f ]
-"45
-[; ;i2c_lcd_display_1519.c: 45:     char s[2];
-[v _s `uc ~T0 @X0 -> 2 `i a ]
-"46
-[; ;i2c_lcd_display_1519.c: 46:     s[0] = (char)(I2C_VARS.d & 0xFF);
-[e = *U + &U _s * -> -> -> 0 `i `ui `ux -> -> # *U &U _s `ui `ux -> & -> . _I2C_VARS 0 `i -> 255 `i `uc ]
-"47
-[; ;i2c_lcd_display_1519.c: 47:     s[1] = (char)(I2C_VARS.d >> 8);
-[e = *U + &U _s * -> -> -> 1 `i `ui `ux -> -> # *U &U _s `ui `ux -> >> -> . _I2C_VARS 0 `i -> 8 `i `uc ]
-"48
-[; ;i2c_lcd_display_1519.c: 48:     lcd_display_clear();
-[e ( _lcd_display_clear ..  ]
-"49
-[; ;i2c_lcd_display_1519.c: 49:     lcd_display_set_cursor(1,1);
-[e ( _lcd_display_set_cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
-"50
-[; ;i2c_lcd_display_1519.c: 50:     lcd_display_write_char(s[0]);
-[e ( _lcd_display_write_char (1 *U + &U _s * -> -> -> 0 `i `ui `ux -> -> # *U &U _s `ui `ux ]
-"51
-[; ;i2c_lcd_display_1519.c: 51:     lcd_display_set_cursor(1,2);
-[e ( _lcd_display_set_cursor (2 , -> -> 1 `i `uc -> -> 2 `i `uc ]
-"52
-[; ;i2c_lcd_display_1519.c: 52:     lcd_display_write_char(s[1]);
-[e ( _lcd_display_write_char (1 *U + &U _s * -> -> -> 1 `i `ui `ux -> -> # *U &U _s `ui `ux ]
-"54
-[; ;i2c_lcd_display_1519.c: 54:     s[0] = (char)(I2C_VARS.data & 0xFF);
-[e = *U + &U _s * -> -> -> 0 `i `ui `ux -> -> # *U &U _s `ui `ux -> & -> . _I2C_VARS 1 `i -> 255 `i `uc ]
-"55
-[; ;i2c_lcd_display_1519.c: 55:     s[1] = (char)(I2C_VARS.data >> 8);
-[e = *U + &U _s * -> -> -> 1 `i `ui `ux -> -> # *U &U _s `ui `ux -> >> -> . _I2C_VARS 1 `i -> 8 `i `uc ]
-"56
-[; ;i2c_lcd_display_1519.c: 56:     lcd_display_set_cursor(2,1);
-[e ( _lcd_display_set_cursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
-"57
-[; ;i2c_lcd_display_1519.c: 57:     lcd_display_write_char(s[0]);
-[e ( _lcd_display_write_char (1 *U + &U _s * -> -> -> 0 `i `ui `ux -> -> # *U &U _s `ui `ux ]
-"58
-[; ;i2c_lcd_display_1519.c: 58:     lcd_display_set_cursor(2,2);
-[e ( _lcd_display_set_cursor (2 , -> -> 2 `i `uc -> -> 2 `i `uc ]
-"59
-[; ;i2c_lcd_display_1519.c: 59:     lcd_display_write_char(s[1]);
-[e ( _lcd_display_write_char (1 *U + &U _s * -> -> -> 1 `i `ui `ux -> -> # *U &U _s `ui `ux ]
-"61
-[; ;i2c_lcd_display_1519.c: 61:     lcd_display_set_cursor(2,5);
-[e ( _lcd_display_set_cursor (2 , -> -> 2 `i `uc -> -> 5 `i `uc ]
-"62
-[; ;i2c_lcd_display_1519.c: 62:     lcd_display_write_char(0xF6);
-[e ( _lcd_display_write_char (1 -> -> 246 `i `uc ]
-"64
-[; ;i2c_lcd_display_1519.c: 64:     lcd_display_set_cursor(1,5);
-[e ( _lcd_display_set_cursor (2 , -> -> 1 `i `uc -> -> 5 `i `uc ]
-"65
-[; ;i2c_lcd_display_1519.c: 65:     lcd_display_write_char(0xFF);
-[e ( _lcd_display_write_char (1 -> -> 255 `i `uc ]
-"66
-[; ;i2c_lcd_display_1519.c: 66:     lcd_display_set_cursor(1,6);
-[e ( _lcd_display_set_cursor (2 , -> -> 1 `i `uc -> -> 6 `i `uc ]
-"67
-[; ;i2c_lcd_display_1519.c: 67:     lcd_display_write_char(0x00);
-[e ( _lcd_display_write_char (1 -> -> 0 `i `uc ]
-"68
-[; ;i2c_lcd_display_1519.c: 68: }
-[e :UE 266 ]
-}
-[a 1C 87 97 105 116 105 110 103 32 46 46 46 0 ]
+[; ;./i2c_classes.h: 21: volatile i2c_package_t MASKED_I2C_PACKAGE;
+[v _MASKED_I2C_PACKAGE `VS254 ~T0 @X0 1 e ]

@@ -3672,12 +3672,37 @@ void init (void);
 
 
 
+# 1 "./i2c_classes.h" 1
+
+
+
+
+
+
+
+
 typedef struct {
     uint8_t addr;
-    uint8_t data;
+    struct {
+        uint8_t value[32];
+        uint8_t index;
+    } data;
+
 } i2c_package_t;
+
+const i2c_package_t I2C_PACKAGE_EMPTY;
+
 volatile i2c_package_t I2C_PACKAGE;
 volatile i2c_package_t MASKED_I2C_PACKAGE;
+
+typedef struct {
+    uint8_t command;
+
+    uint8_t parameters[32];
+    uint8_t parameter_index;
+
+}i2c_command_t;
+# 7 "./i2c_interrupt.h" 2
 
 
 void on_interrupt_i2c (void);
@@ -3756,20 +3781,50 @@ void update_if_flag_set (void)
     }
 }
 
-void display_i2c_data (uint8_t line, i2c_package_t data);
+void display_i2c_package (uint8_t line, i2c_package_t i2c_package);
+void display_i2c_data (i2c_package_t i2c_package);
+void write_to_display (char *string);
+
 void update_display(void)
 {
+    display_i2c_data (I2C_PACKAGE);
 
-    display_i2c_data(1, I2C_PACKAGE);
-    display_i2c_data(2, MASKED_I2C_PACKAGE);
+
 }
 
-void display_i2c_data (uint8_t line, i2c_package_t i2c_package)
+
+void write_to_display (char* string)
+{
+    lcd_display_set_cursor(1,1);
+    lcd_display_write_string(string);
+}
+
+
+void display_i2c_package (uint8_t line, i2c_package_t i2c_package)
 {
     lcd_display_set_cursor(line, 1);
     lcd_display_write_string("add:  data:  I2C");
     lcd_display_set_cursor(line,5);
     lcd_display_write_char(i2c_package.addr);
     lcd_display_set_cursor(line,12);
-    lcd_display_write_char(i2c_package.data);
+    lcd_display_write_char(i2c_package.data.value[0]);
+}
+
+
+void display_i2c_data (i2c_package_t i2c_package)
+{
+    lcd_display_set_cursor(1, 1);
+    lcd_display_write_string("-------------------------");
+    lcd_display_set_cursor(2, 1);
+    lcd_display_write_string("-------------------------");
+
+    for(uint8_t i = 0; i2c_package.data.value[i]!='\0'; i++){
+        lcd_display_set_cursor(1+(i/16), (i%16)+1);
+        lcd_display_write_char(i2c_package.data.value[i]);
+    }
+    lcd_display_set_cursor(1,16);
+    lcd_display_write_char('|');
+    lcd_display_set_cursor(2,16);
+    lcd_display_write_char('|');
+
 }

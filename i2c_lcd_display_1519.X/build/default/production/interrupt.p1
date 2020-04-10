@@ -1,16 +1,20 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"7 ./i2c_interrupt.h
-[; ;./i2c_interrupt.h: 7: typedef struct {
-[s S254 `uc 1 `uc 1 ]
+"11 ./i2c_classes.h
+[; ;./i2c_classes.h: 11:     struct {
+[s S255 `uc -> 32 `i `uc 1 ]
+[n S255 . value index ]
+"9
+[; ;./i2c_classes.h: 9: typedef struct {
+[s S254 `uc 1 `S255 1 ]
 [n S254 . addr data ]
 "11 ./interrupt.h
 [; ;./interrupt.h: 11:     struct {
-[s S256 :1 `uc 1 ]
-[n S256 . update_lcd_display ]
+[s S258 :1 `uc 1 ]
+[n S258 . update_lcd_display ]
 "10
 [; ;./interrupt.h: 10: typedef union {
-[u S255 `S256 1 ]
-[n S255 . . ]
+[u S257 `S258 1 ]
+[n S257 . . ]
 [t ~ __interrupt . k ]
 [t T1 __interrupt ]
 "5398 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1519.h
@@ -382,15 +386,64 @@ Version 4.0 HI-TECH Software Intermediate Code
 "4636
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1519.h: 4636: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"11 ./i2c_interrupt.h
-[; ;./i2c_interrupt.h: 11: volatile i2c_package_t I2C_PACKAGE;
+"18 ./i2c_classes.h
+[; ;./i2c_classes.h: 18: const i2c_package_t I2C_PACKAGE_EMPTY;
+[v _I2C_PACKAGE_EMPTY `CS254 ~T0 @X0 1 e ]
+[i _I2C_PACKAGE_EMPTY
+:U ..
+:U ..
+-> -> 0 `i `uc
+:U ..
+:U ..
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+-> -> 0 `i `uc
+..
+..
+..
+..
+]
+"20
+[; ;./i2c_classes.h: 20: volatile i2c_package_t I2C_PACKAGE;
 [v _I2C_PACKAGE `VS254 ~T0 @X0 1 e ]
-"12
-[; ;./i2c_interrupt.h: 12: volatile i2c_package_t MASKED_I2C_PACKAGE;
+"21
+[; ;./i2c_classes.h: 21: volatile i2c_package_t MASKED_I2C_PACKAGE;
 [v _MASKED_I2C_PACKAGE `VS254 ~T0 @X0 1 e ]
 "16 ./interrupt.h
 [; ;./interrupt.h: 16: volatile int_flag_t INT_FLAGS;
-[v _INT_FLAGS `VS255 ~T0 @X0 1 e ]
+[v _INT_FLAGS `VS257 ~T0 @X0 1 e ]
 [v $root$_interruptHandler `(v ~T0 @X0 0 e ]
 "7 interrupt.c
 [; ;interrupt.c: 7: void __attribute__((picinterrupt(("")))) interruptHandler()
@@ -402,7 +455,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "10
 [; ;interrupt.c: 10:     if (SSPIE && SSPIF){
-[e $ ! && _SSPIE _SSPIF 258  ]
+[e $ ! && _SSPIE _SSPIF 260  ]
 {
 "11
 [; ;interrupt.c: 11:         on_interrupt_i2c ();
@@ -410,10 +463,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "12
 [; ;interrupt.c: 12:     }
 }
-[e :U 258 ]
+[e :U 260 ]
 "15
 [; ;interrupt.c: 15:     if (T0IE && T0IF){
-[e $ ! && _T0IE _T0IF 259  ]
+[e $ ! && _T0IE _T0IF 261  ]
 {
 "16
 [; ;interrupt.c: 16:         on_interrupt_timer_0();
@@ -424,10 +477,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "18
 [; ;interrupt.c: 18:     }
 }
-[e :U 259 ]
+[e :U 261 ]
 "19
 [; ;interrupt.c: 19: }
-[e :UE 257 ]
+[e :UE 259 ]
 }
 "21
 [; ;interrupt.c: 21: void on_interrupt_timer_0 (void)
@@ -439,5 +492,5 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "24
 [; ;interrupt.c: 24: }
-[e :UE 260 ]
+[e :UE 262 ]
 }

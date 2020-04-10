@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=i2c_lcd_display_1519.c init.c interrupt.c lcd_display.c i2c_interrupt.c
+SOURCEFILES_QUOTED_IF_SPACED=i2c_lcd_display_1519.c init.c interrupt.c lcd_display.c i2c_interrupt.c i2c_classes.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/i2c_lcd_display_1519.p1 ${OBJECTDIR}/init.p1 ${OBJECTDIR}/interrupt.p1 ${OBJECTDIR}/lcd_display.p1 ${OBJECTDIR}/i2c_interrupt.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/i2c_lcd_display_1519.p1.d ${OBJECTDIR}/init.p1.d ${OBJECTDIR}/interrupt.p1.d ${OBJECTDIR}/lcd_display.p1.d ${OBJECTDIR}/i2c_interrupt.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/i2c_lcd_display_1519.p1 ${OBJECTDIR}/init.p1 ${OBJECTDIR}/interrupt.p1 ${OBJECTDIR}/lcd_display.p1 ${OBJECTDIR}/i2c_interrupt.p1 ${OBJECTDIR}/i2c_classes.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/i2c_lcd_display_1519.p1.d ${OBJECTDIR}/init.p1.d ${OBJECTDIR}/interrupt.p1.d ${OBJECTDIR}/lcd_display.p1.d ${OBJECTDIR}/i2c_interrupt.p1.d ${OBJECTDIR}/i2c_classes.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/i2c_lcd_display_1519.p1 ${OBJECTDIR}/init.p1 ${OBJECTDIR}/interrupt.p1 ${OBJECTDIR}/lcd_display.p1 ${OBJECTDIR}/i2c_interrupt.p1
+OBJECTFILES=${OBJECTDIR}/i2c_lcd_display_1519.p1 ${OBJECTDIR}/init.p1 ${OBJECTDIR}/interrupt.p1 ${OBJECTDIR}/lcd_display.p1 ${OBJECTDIR}/i2c_interrupt.p1 ${OBJECTDIR}/i2c_classes.p1
 
 # Source Files
-SOURCEFILES=i2c_lcd_display_1519.c init.c interrupt.c lcd_display.c i2c_interrupt.c
+SOURCEFILES=i2c_lcd_display_1519.c init.c interrupt.c lcd_display.c i2c_interrupt.c i2c_classes.c
 
 
 
@@ -134,6 +134,14 @@ ${OBJECTDIR}/i2c_interrupt.p1: i2c_interrupt.c  nbproject/Makefile-${CND_CONF}.m
 	@-${MV} ${OBJECTDIR}/i2c_interrupt.d ${OBJECTDIR}/i2c_interrupt.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/i2c_interrupt.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/i2c_classes.p1: i2c_classes.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/i2c_classes.p1.d 
+	@${RM} ${OBJECTDIR}/i2c_classes.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1    -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/i2c_classes.p1 i2c_classes.c 
+	@-${MV} ${OBJECTDIR}/i2c_classes.d ${OBJECTDIR}/i2c_classes.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/i2c_classes.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 else
 ${OBJECTDIR}/i2c_lcd_display_1519.p1: i2c_lcd_display_1519.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -174,6 +182,14 @@ ${OBJECTDIR}/i2c_interrupt.p1: i2c_interrupt.c  nbproject/Makefile-${CND_CONF}.m
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c    -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/i2c_interrupt.p1 i2c_interrupt.c 
 	@-${MV} ${OBJECTDIR}/i2c_interrupt.d ${OBJECTDIR}/i2c_interrupt.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/i2c_interrupt.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/i2c_classes.p1: i2c_classes.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/i2c_classes.p1.d 
+	@${RM} ${OBJECTDIR}/i2c_classes.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c    -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/i2c_classes.p1 i2c_classes.c 
+	@-${MV} ${OBJECTDIR}/i2c_classes.d ${OBJECTDIR}/i2c_classes.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/i2c_classes.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 

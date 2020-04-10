@@ -3682,7 +3682,7 @@ volatile int_flag_t INT_FLAGS;
 
 
 
-void i2c_master_send (uint8_t i2c_add, uint8_t data);
+void i2c_master_send (uint8_t i2c_add, uint8_t *data);
 void i2c_master_read (uint8_t i2c_add, uint8_t *data);
 # 11 "pic_i2c.c" 2
 
@@ -3694,14 +3694,14 @@ void main()
     init();
 
     LATCbits.LATC7 = 1;
-    char data = '0';
+    uint8_t* data = "Hej med dig :)  Meget sjovt";
 
 
     for(;;) {
+        LATCbits.LATC7 ^= 1;
+
         _delay((unsigned long)((3000)*(8000000/4000.0)));
         i2c_master_send(0x30, data);
-        LATCbits.LATC7 ^= 1;
-        data++;
     }
     return;
 }

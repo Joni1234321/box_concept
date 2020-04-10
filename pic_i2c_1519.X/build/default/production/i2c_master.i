@@ -3253,7 +3253,7 @@ typedef uint32_t uint_fast32_t;
 # 5 "./i2c_master.h" 2
 
 
-void i2c_master_send (uint8_t i2c_add, uint8_t data);
+void i2c_master_send (uint8_t i2c_add, uint8_t *data);
 void i2c_master_read (uint8_t i2c_add, uint8_t *data);
 # 1 "i2c_master.c" 2
 
@@ -3267,17 +3267,24 @@ void i2c_master_wait(void);
 
 
 
-
-void i2c_master_send (uint8_t i2c_add, uint8_t data)
+void i2c_master_send (uint8_t i2c_add, uint8_t *data)
 {
     uint8_t i2c_address = i2c_add + 0;
 
     i2c_master_start();
+
+
     if(i2c_master_write(i2c_add)) return;
-    if(i2c_master_write(data)) return;
+
+
+ for(uint8_t i = 0; data[i] != '\0'; i++ ) {
+        if(i2c_master_write(data[i])) return;
+    }
+
     i2c_master_stop();
 
 }
+
 
 void i2c_master_read (uint8_t i2c_add, uint8_t *data)
 {

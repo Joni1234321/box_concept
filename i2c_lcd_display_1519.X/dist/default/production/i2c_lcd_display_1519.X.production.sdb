@@ -3,19 +3,23 @@
 [d edition pro ]
 [d chip 16F1519 ]
 [d frameptr 6 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"8 E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+"12 E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
 [v _on_interrupt_i2c on_interrupt_i2c `(v  1 e 1 0 ]
+"72
+[v _update_i2c_related_variables update_i2c_related_variables `(v  1 e 1 0 ]
 "16 E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
 [v _main main `(v  1 e 1 0 ]
 "35
 [v _update_if_flag_set update_if_flag_set `(v  1 e 1 0 ]
-"44
+"47
 [v _update_display update_display `(v  1 e 1 0 ]
-"51
+"73
 [v _display_i2c_data display_i2c_data `(v  1 e 1 0 ]
 "10 E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
 [v _init init `(v  1 e 1 0 ]
@@ -51,17 +55,20 @@
 [v _lcd_display_write_char lcd_display_write_char `(v  1 e 1 0 ]
 "99
 [v _lcd_display_write_string lcd_display_write_string `(v  1 e 1 0 ]
-[s S22 . 2 `uc 1 addr 1 0 `uc 1 data 1 1 ]
-"11 E:\Projects\Box_concept\i2c_lcd_display_1519.X/i2c_interrupt.h
-[v _I2C_PACKAGE I2C_PACKAGE `VES22  1 e 2 0 ]
-"12
-[v _MASKED_I2C_PACKAGE MASKED_I2C_PACKAGE `VES22  1 e 2 0 ]
-[s S25 . 1 `uc 1 update_lcd_display 1 0 :1:0 
+[s S22 . 33 `[32]uc 1 value 32 0 `uc 1 index 1 32 ]
+"18 E:\Projects\Box_concept\i2c_lcd_display_1519.X/i2c_classes.h
+[s S25 . 34 `uc 1 addr 1 0 `S22 1 data 33 1 ]
+[v _I2C_PACKAGE_EMPTY I2C_PACKAGE_EMPTY `DCS25  1 e 34 0 ]
+"20
+[v _I2C_PACKAGE I2C_PACKAGE `VES25  1 e 34 0 ]
+"21
+[v _MASKED_I2C_PACKAGE MASKED_I2C_PACKAGE `VES25  1 e 34 0 ]
+[s S28 . 1 `uc 1 update_lcd_display 1 0 :1:0 
 ]
 "16 E:\Projects\Box_concept\i2c_lcd_display_1519.X/interrupt.h
-[u S27 . 1 `S25 1 . 1 0 ]
-[v _INT_FLAGS INT_FLAGS `VES27  1 e 1 0 ]
-[s S195 . 1 `uc 1 IOCIF 1 0 :1:0 
+[u S30 . 1 `S28 1 . 1 0 ]
+[v _INT_FLAGS INT_FLAGS `VES30  1 e 1 0 ]
+[s S219 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 IOCIE 1 0 :1:3 
@@ -71,13 +78,13 @@
 `uc 1 GIE 1 0 :1:7 
 ]
 "374 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1519.h
-[s S204 . 1 `uc 1 . 1 0 :2:0 
+[s S228 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 T0IE 1 0 :1:5 
 ]
-[u S209 . 1 `S195 1 . 1 0 `S204 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES209  1 e 1 @11 ]
+[u S233 . 1 `S219 1 . 1 0 `S228 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES233  1 e 1 @11 ]
 "811
 [v _TMR0 TMR0 `VEuc  1 e 1 @21 ]
 "1131
@@ -86,7 +93,7 @@
 [v _TRISB TRISB `VEuc  1 e 1 @141 ]
 "1255
 [v _TRISC TRISC `VEuc  1 e 1 @142 ]
-[s S169 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S193 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -96,11 +103,11 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "1272
-[u S178 . 1 `S169 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES178  1 e 1 @142 ]
+[u S202 . 1 `S193 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES202  1 e 1 @142 ]
 "1317
 [v _TRISD TRISD `VEuc  1 e 1 @143 ]
-[s S233 . 1 `uc 1 PS 1 0 :3:0 
+[s S257 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 TMR0SE 1 0 :1:4 
 `uc 1 TMR0CS 1 0 :1:5 
@@ -108,21 +115,21 @@
 `uc 1 nWPUEN 1 0 :1:7 
 ]
 "1530
-[s S240 . 1 `uc 1 PS0 1 0 :1:0 
+[s S264 . 1 `uc 1 PS0 1 0 :1:0 
 `uc 1 PS1 1 0 :1:1 
 `uc 1 PS2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
 ]
-[u S247 . 1 `S233 1 . 1 0 `S240 1 . 1 0 ]
-[v _OPTION_REGbits OPTION_REGbits `VES247  1 e 1 @149 ]
-[s S121 . 1 `uc 1 SCS 1 0 :2:0 
+[u S271 . 1 `S257 1 . 1 0 `S264 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES271  1 e 1 @149 ]
+[s S145 . 1 `uc 1 SCS 1 0 :2:0 
 `uc 1 . 1 0 :1:2 
 `uc 1 IRCF 1 0 :4:3 
 ]
 "1727
-[s S125 . 1 `uc 1 SCS0 1 0 :1:0 
+[s S149 . 1 `uc 1 SCS0 1 0 :1:0 
 `uc 1 SCS1 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 IRCF0 1 0 :1:3 
@@ -130,14 +137,26 @@
 `uc 1 IRCF2 1 0 :1:5 
 `uc 1 IRCF3 1 0 :1:6 
 ]
-[u S133 . 1 `S121 1 . 1 0 `S125 1 . 1 0 ]
-[v _OSCCONbits OSCCONbits `VES133  1 e 1 @153 ]
+[u S157 . 1 `S145 1 . 1 0 `S149 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES157  1 e 1 @153 ]
 "2020
 [v _LATA LATA `VEuc  1 e 1 @268 ]
 "2082
 [v _LATB LATB `VEuc  1 e 1 @269 ]
 "2144
 [v _LATC LATC `VEuc  1 e 1 @270 ]
+[s S467 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
+]
+"2161
+[u S476 . 1 `S467 1 . 1 0 ]
+[v _LATCbits LATCbits `VES476  1 e 1 @270 ]
 "2206
 [v _LATD LATD `VEuc  1 e 1 @271 ]
 "2426
@@ -154,22 +173,34 @@
 [v _SSPADD SSPADD `VEuc  1 e 1 @530 ]
 "3420
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @532 ]
+[s S441 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"3442
+[u S450 . 1 `S441 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES450  1 e 1 @532 ]
 "3542
 [v _SSPCON1 SSPCON1 `VEuc  1 e 1 @533 ]
-[s S379 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S410 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "3634
-[s S385 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S416 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[u S390 . 1 `S379 1 . 1 0 `S385 1 . 1 0 ]
-[v _SSPCONbits SSPCONbits `VES390  1 e 1 @533 ]
+[u S421 . 1 `S410 1 . 1 0 `S416 1 . 1 0 ]
+[v _SSPCONbits SSPCONbits `VES421  1 e 1 @533 ]
 "3746
 [v _SSPCON2 SSPCON2 `VEuc  1 e 1 @534 ]
 "3868
@@ -204,10 +235,8 @@
 [v _T0IE T0IE `VEb  1 e 0 @93 ]
 "5440
 [v _T0IF T0IF `VEb  1 e 0 @90 ]
-"5 E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-[v _i2c_addr i2c_addr `uc  1 e 1 0 ]
-"6
-[v _i2c_data i2c_data `uc  1 e 1 0 ]
+"11 E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+[v _current_package current_package `S25  1 e 34 0 ]
 "16 E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
 [v _main main `(v  1 e 1 0 ]
 {
@@ -218,29 +247,29 @@
 {
 "41
 } 0
-"44
+"47
 [v _update_display update_display `(v  1 e 1 0 ]
 {
-"49
+"52
 } 0
-"51
+"73
 [v _display_i2c_data display_i2c_data `(v  1 e 1 0 ]
 {
-[v display_i2c_data@line line `uc  1 a 1 wreg ]
-[v display_i2c_data@line line `uc  1 a 1 wreg ]
-[s S22 . 2 `uc 1 addr 1 0 `uc 1 data 1 1 ]
-[v display_i2c_data@i2c_package i2c_package `S22  1 p 2 4 ]
-"53
-[v display_i2c_data@line line `uc  1 a 1 7 ]
-"59
+"80
+[v display_i2c_data@i i `uc  1 a 1 44 ]
+[s S22 . 33 `[32]uc 1 value 32 0 `uc 1 index 1 32 ]
+"73
+[s S25 . 34 `uc 1 addr 1 0 `S22 1 data 33 1 ]
+[v display_i2c_data@i2c_package i2c_package `S25  1 p 34 10 ]
+"89
 } 0
 "99 E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
 [v _lcd_display_write_string lcd_display_write_string `(v  1 e 1 0 ]
 {
 "101
-[v lcd_display_write_string@i i `i  1 a 2 0 ]
+[v lcd_display_write_string@i i `i  1 a 2 1 ]
 "99
-[v lcd_display_write_string@a a `*.25uc  1 p 2 7 ]
+[v lcd_display_write_string@a a `*.25uc  1 p 2 8 ]
 "104
 } 0
 "83
@@ -248,12 +277,12 @@
 {
 [v lcd_display_write_char@a a `uc  1 a 1 wreg ]
 "85
-[v lcd_display_write_char@y y `uc  1 a 1 5 ]
-[v lcd_display_write_char@temp temp `uc  1 a 1 4 ]
+[v lcd_display_write_char@y y `uc  1 a 1 6 ]
+[v lcd_display_write_char@temp temp `uc  1 a 1 5 ]
 "83
 [v lcd_display_write_char@a a `uc  1 a 1 wreg ]
 "86
-[v lcd_display_write_char@a a `uc  1 a 1 6 ]
+[v lcd_display_write_char@a a `uc  1 a 1 7 ]
 "97
 } 0
 "43
@@ -261,17 +290,30 @@
 {
 [v lcd_display_set_cursor@a a `uc  1 a 1 wreg ]
 "45
-[v lcd_display_set_cursor@temp temp `uc  1 a 1 3 ]
-[v lcd_display_set_cursor@y y `uc  1 a 1 2 ]
-[v lcd_display_set_cursor@z z `uc  1 a 1 1 ]
+[v lcd_display_set_cursor@temp temp `uc  1 a 1 9 ]
+[v lcd_display_set_cursor@y y `uc  1 a 1 8 ]
+[v lcd_display_set_cursor@z z `uc  1 a 1 7 ]
 "43
 [v lcd_display_set_cursor@a a `uc  1 a 1 wreg ]
-[v lcd_display_set_cursor@b b `uc  1 p 1 5 ]
+[v lcd_display_set_cursor@b b `uc  1 p 1 8 ]
 "46
-[v lcd_display_set_cursor@a a `uc  1 a 1 0 ]
+[v lcd_display_set_cursor@a a `uc  1 a 1 6 ]
 "62
 } 0
-"64
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 2 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 1 ]
+[v ___awdiv@counter counter `uc  1 a 1 0 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 3 ]
+[v ___awdiv@dividend dividend `i  1 p 2 5 ]
+"41
+} 0
+"64 E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
 [v _lcd_display_init lcd_display_init `(v  1 e 1 0 ]
 {
 "81
@@ -287,7 +329,7 @@
 [v lcd_display_cmd@a a `uc  1 a 1 wreg ]
 [v lcd_display_cmd@a a `uc  1 a 1 wreg ]
 "30
-[v lcd_display_cmd@a a `uc  1 a 1 4 ]
+[v lcd_display_cmd@a a `uc  1 a 1 5 ]
 "35
 } 0
 "5
@@ -296,7 +338,7 @@
 [v lcd_display_port@a a `uc  1 a 1 wreg ]
 [v lcd_display_port@a a `uc  1 a 1 wreg ]
 "7
-[v lcd_display_port@a a `uc  1 a 1 2 ]
+[v lcd_display_port@a a `uc  1 a 1 3 ]
 "26
 } 0
 "10 E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
@@ -349,8 +391,16 @@
 {
 "24
 } 0
-"8 E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+"12 E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
 [v _on_interrupt_i2c on_interrupt_i2c `(v  1 e 1 0 ]
 {
-"63
+"70
+} 0
+"72
+[v _update_i2c_related_variables update_i2c_related_variables `(v  1 e 1 0 ]
+{
+[s S22 . 33 `[32]uc 1 value 32 0 `uc 1 index 1 32 ]
+[s S25 . 34 `uc 1 addr 1 0 `S22 1 data 33 1 ]
+[v update_i2c_related_variables@package package `S25  1 p 34 0 ]
+"80
 } 0

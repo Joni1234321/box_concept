@@ -9,11 +9,11 @@
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
 "13 E:\Projects\Box_concept\pic_i2c_1519.X\i2c_master.c
 [v _i2c_master_send i2c_master_send `(v  1 e 1 0 ]
-"30
+"38
 [v _i2c_master_start i2c_master_start `(v  1 e 1 0 ]
-"37
+"45
 [v _i2c_master_stop i2c_master_stop `(v  1 e 1 0 ]
-"44
+"52
 [v _i2c_master_write i2c_master_write `(uc  1 e 1 0 ]
 "10 E:\Projects\Box_concept\pic_i2c_1519.X\init.c
 [v _init init `(v  1 e 1 0 ]
@@ -184,7 +184,9 @@
 "14 E:\Projects\Box_concept\pic_i2c_1519.X\pic_i2c.c
 [v _main main `(v  1 e 1 0 ]
 {
-"27
+"20
+[v main@data data `uc  1 a 1 9 ]
+"31
 } 0
 "10 E:\Projects\Box_concept\pic_i2c_1519.X\init.c
 [v _init init `(v  1 e 1 0 ]
@@ -229,27 +231,27 @@
 "13 E:\Projects\Box_concept\pic_i2c_1519.X\i2c_master.c
 [v _i2c_master_send i2c_master_send `(v  1 e 1 0 ]
 {
-[v i2c_master_send@bus_add bus_add `uc  1 a 1 wreg ]
-[v i2c_master_send@bus_add bus_add `uc  1 a 1 wreg ]
+[v i2c_master_send@i2c_add i2c_add `uc  1 a 1 wreg ]
+[v i2c_master_send@i2c_add i2c_add `uc  1 a 1 wreg ]
 [v i2c_master_send@data data `uc  1 p 1 2 ]
-[v i2c_master_send@bus_add bus_add `uc  1 a 1 4 ]
-"22
+[v i2c_master_send@i2c_add i2c_add `uc  1 a 1 6 ]
+"30
 } 0
-"44
+"52
 [v _i2c_master_write i2c_master_write `(uc  1 e 1 0 ]
 {
 [v i2c_master_write@data data `ui  1 p 2 0 ]
-"56
+"64
 } 0
-"37
+"45
 [v _i2c_master_stop i2c_master_stop `(v  1 e 1 0 ]
 {
-"42
+"50
 } 0
-"30
+"38
 [v _i2c_master_start i2c_master_start `(v  1 e 1 0 ]
 {
-"35
+"43
 } 0
 "9 E:\Projects\Box_concept\pic_i2c_1519.X\interrupt.c
 [v _interruptHandler interruptHandler `II(v  1 e 1 0 ]

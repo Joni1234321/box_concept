@@ -11,49 +11,56 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Joni1\AppData\Local\Temp\s1h9k.o
+$C:\Users\Joni1\AppData\Local\Temp\shgc.o
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 21 21 2 2
 config CONFIG 0 8007 8007 2 2
 $dist/default/production\i2c_lcd_display_1519.X.production.o
-cinit CODE 0 23 23 D 2
-text1 CODE 0 262 262 A 2
-text2 CODE 0 209 209 13 2
-text3 CODE 0 12E 12E 2C 2
-text4 CODE 0 1A6 1A6 1F 2
-text5 CODE 0 15A 15A 2C 2
-text6 CODE 0 A2 A2 49 2
-text7 CODE 0 EB EB 43 2
-text8 CODE 0 26C 26C 9 2
-text9 CODE 0 1E1 1E1 14 2
-text10 CODE 0 186 186 20 2
-text11 CODE 0 23D 23D D 2
-text12 CODE 0 275 275 7 2
-text13 CODE 0 288 288 1 2
-text14 CODE 0 22D 22D 10 2
-text15 CODE 0 27C 27C 7 2
-text16 CODE 0 283 283 5 2
-text17 CODE 0 256 256 C 2
-text18 CODE 0 1F5 1F5 14 2
-text20 CODE 0 289 289 1 2
-text21 CODE 0 30 30 72 2
-maintext CODE 0 1C5 1C5 1C 2
+cinit CODE 0 23 23 1D 2
+text1 CODE 0 3A4 3A4 A 2
+text2 CODE 0 34B 34B 13 2
+text3 CODE 0 D9 D9 6E 2
+text4 CODE 0 2E8 2E8 1F 2
+text5 CODE 0 29C 29C 2C 2
+text6 CODE 0 1A7 1A7 49 2
+text7 CODE 0 147 147 60 2
+text8 CODE 0 1F0 1F0 43 2
+text9 CODE 0 3AE 3AE 9 2
+text10 CODE 0 323 323 14 2
+text11 CODE 0 2C8 2C8 20 2
+text12 CODE 0 37F 37F D 2
+text13 CODE 0 3B7 3B7 7 2
+text14 CODE 0 3D0 3D0 1 2
+text15 CODE 0 36F 36F 10 2
+text16 CODE 0 3BE 3BE 7 2
+text17 CODE 0 3CB 3CB 5 2
+text18 CODE 0 398 398 C 2
+text19 CODE 0 337 337 14 2
+text21 CODE 0 3D1 3D1 1 2
+text22 CODE 0 40 40 99 2
+text23 CODE 0 26F 26F 2D 2
+maintext CODE 0 307 307 1C 2
 cstackCOMMON COMMON 1 70 70 A 1
-cstackBANK0 BANK0 1 20 20 8 1
-stringtext1 STRCODE 0 21C 21C 11 2
-stringtext2 STRCODE 0 24A 24A C 2
+cstackBANK0 BANK0 1 42 42 22 1
+cstackBANK1 BANK1 1 A0 A0 2D 1
+cstackBANK2 BANK2 1 142 142 4 1
+stringtext1 STRCODE 0 233 233 3C 2
+stringtext2 STRCODE 0 35E 35E 11 2
+stringtext3 STRCODE 0 38C 38C C 2
 intentry CODE 0 4 4 1D 2
-bssBANK0 BANK0 1 28 28 6 1
-bssCOMMON COMMON 1 7A 7A 2 1
+bssBANK0 BANK0 1 20 20 22 1
+bssBANK1 BANK1 1 CD CD 23 1
+bssBANK2 BANK2 1 120 120 22 1
+clrtext CODE 0 3C5 3C5 6 2
+bssCOMMON COMMON 1 7A 7A 1 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 2E-6F 1
-RAM A0-EF 1
-RAM 120-16F 1
+RAM 64-6F 1
+RAM 146-16F 1
 RAM 1A0-1EF 1
 RAM 220-26F 1
 RAM 2A0-2EF 1
@@ -64,9 +71,8 @@ RAM 4A0-4EF 1
 RAM 520-56F 1
 RAM 5A0-5EF 1
 RAM 620-64F 1
-BANK0 2E-6F 1
-BANK1 A0-EF 1
-BANK2 120-16F 1
+BANK0 64-6F 1
+BANK2 146-16F 1
 BANK3 1A0-1EF 1
 BANK4 220-26F 1
 BANK5 2A0-2EF 1
@@ -75,9 +81,9 @@ BANK7 3A0-3EF 1
 BANK8 420-46F 1
 BANK9 4A0-4EF 1
 CONST 2-3 2
-CONST 28A-3FFF 2
+CONST 3D2-3FFF 2
 ENTRY 2-3 2
-ENTRY 28A-3FFF 2
+ENTRY 3D2-3FFF 2
 IDLOC 8000-8003 2
 SFR10 500-51F 1
 SFR11 580-59F 1
@@ -101,9 +107,9 @@ SFR28 E00-E6F 1
 SFR29 E80-EEF 1
 SFR30 F00-F6F 1
 SFR31 F80-FEF 1
-STACK 200E-23EF 1
+STACK 20C6-23EF 1
 CODE 2-3 2
-CODE 28A-3FFF 2
+CODE 3D2-3FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-11F 1
@@ -118,11 +124,11 @@ BANK10 520-56F 1
 BANK11 5A0-5EF 1
 BANK12 620-64F 1
 BIGRAM 2000-23EF 1
-COMMON 7C-7D 1
+COMMON 7B-7D 1
 STRCODE 2-3 2
-STRCODE 28A-3FFF 2
+STRCODE 3D2-3FFF 2
 STRING 2-3 2
-STRING 28A-3FFF 2
+STRING 3D2-3FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -137,21 +143,31 @@ STRING 28A-3FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\i2c_lcd_display_1519.X.production.o
-23 cinit CODE >1455:C:\Users\Joni1\AppData\Local\Temp\s1h9k.s
-23 cinit CODE >1458:C:\Users\Joni1\AppData\Local\Temp\s1h9k.s
-23 cinit CODE >1488:C:\Users\Joni1\AppData\Local\Temp\s1h9k.s
-24 cinit CODE >1489:C:\Users\Joni1\AppData\Local\Temp\s1h9k.s
-25 cinit CODE >1493:C:\Users\Joni1\AppData\Local\Temp\s1h9k.s
-26 cinit CODE >1494:C:\Users\Joni1\AppData\Local\Temp\s1h9k.s
-27 cinit CODE >1495:C:\Users\Joni1\AppData\Local\Temp\s1h9k.s
-28 cinit CODE >1496:C:\Users\Joni1\AppData\Local\Temp\s1h9k.s
-29 cinit CODE >1497:C:\Users\Joni1\AppData\Local\Temp\s1h9k.s
-2A cinit CODE >1498:C:\Users\Joni1\AppData\Local\Temp\s1h9k.s
-2B cinit CODE >1499:C:\Users\Joni1\AppData\Local\Temp\s1h9k.s
-2C cinit CODE >1505:C:\Users\Joni1\AppData\Local\Temp\s1h9k.s
-2C cinit CODE >1507:C:\Users\Joni1\AppData\Local\Temp\s1h9k.s
-2D cinit CODE >1508:C:\Users\Joni1\AppData\Local\Temp\s1h9k.s
-2E cinit CODE >1509:C:\Users\Joni1\AppData\Local\Temp\s1h9k.s
+23 cinit CODE >1767:C:\Users\Joni1\AppData\Local\Temp\shgc.s
+23 cinit CODE >1770:C:\Users\Joni1\AppData\Local\Temp\shgc.s
+23 cinit CODE >1815:C:\Users\Joni1\AppData\Local\Temp\shgc.s
+24 cinit CODE >1819:C:\Users\Joni1\AppData\Local\Temp\shgc.s
+25 cinit CODE >1820:C:\Users\Joni1\AppData\Local\Temp\shgc.s
+26 cinit CODE >1821:C:\Users\Joni1\AppData\Local\Temp\shgc.s
+27 cinit CODE >1822:C:\Users\Joni1\AppData\Local\Temp\shgc.s
+28 cinit CODE >1823:C:\Users\Joni1\AppData\Local\Temp\shgc.s
+29 cinit CODE >1824:C:\Users\Joni1\AppData\Local\Temp\shgc.s
+2C cinit CODE >1828:C:\Users\Joni1\AppData\Local\Temp\shgc.s
+2D cinit CODE >1829:C:\Users\Joni1\AppData\Local\Temp\shgc.s
+2E cinit CODE >1830:C:\Users\Joni1\AppData\Local\Temp\shgc.s
+2F cinit CODE >1831:C:\Users\Joni1\AppData\Local\Temp\shgc.s
+30 cinit CODE >1832:C:\Users\Joni1\AppData\Local\Temp\shgc.s
+31 cinit CODE >1833:C:\Users\Joni1\AppData\Local\Temp\shgc.s
+34 cinit CODE >1837:C:\Users\Joni1\AppData\Local\Temp\shgc.s
+35 cinit CODE >1838:C:\Users\Joni1\AppData\Local\Temp\shgc.s
+36 cinit CODE >1839:C:\Users\Joni1\AppData\Local\Temp\shgc.s
+37 cinit CODE >1840:C:\Users\Joni1\AppData\Local\Temp\shgc.s
+38 cinit CODE >1841:C:\Users\Joni1\AppData\Local\Temp\shgc.s
+39 cinit CODE >1842:C:\Users\Joni1\AppData\Local\Temp\shgc.s
+3C cinit CODE >1848:C:\Users\Joni1\AppData\Local\Temp\shgc.s
+3C cinit CODE >1850:C:\Users\Joni1\AppData\Local\Temp\shgc.s
+3D cinit CODE >1851:C:\Users\Joni1\AppData\Local\Temp\shgc.s
+3E cinit CODE >1852:C:\Users\Joni1\AppData\Local\Temp\shgc.s
 4 intentry CODE >7:E:\Projects\Box_concept\i2c_lcd_display_1519.X\interrupt.c
 6 intentry CODE >10:E:\Projects\Box_concept\i2c_lcd_display_1519.X\interrupt.c
 10 intentry CODE >11:E:\Projects\Box_concept\i2c_lcd_display_1519.X\interrupt.c
@@ -159,202 +175,247 @@ $dist/default/production\i2c_lcd_display_1519.X.production.o
 1B intentry CODE >16:E:\Projects\Box_concept\i2c_lcd_display_1519.X\interrupt.c
 1E intentry CODE >17:E:\Projects\Box_concept\i2c_lcd_display_1519.X\interrupt.c
 1F intentry CODE >19:E:\Projects\Box_concept\i2c_lcd_display_1519.X\interrupt.c
-30 text21 CODE >8:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-30 text21 CODE >10:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-32 text21 CODE >11:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-34 text21 CODE >14:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-3C text21 CODE >16:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-40 text21 CODE >17:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-41 text21 CODE >18:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-42 text21 CODE >19:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-43 text21 CODE >23:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-4B text21 CODE >25:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-4F text21 CODE >26:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-53 text21 CODE >27:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-54 text21 CODE >29:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-54 text21 CODE >30:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-5C text21 CODE >32:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-60 text21 CODE >33:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-64 text21 CODE >34:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-65 text21 CODE >35:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-65 text21 CODE >38:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-6D text21 CODE >40:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-71 text21 CODE >41:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-75 text21 CODE >42:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-77 text21 CODE >43:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-7D text21 CODE >46:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-7F text21 CODE >47:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-84 text21 CODE >45:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-84 text21 CODE >48:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-89 text21 CODE >49:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-8A text21 CODE >50:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-8A text21 CODE >51:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-92 text21 CODE >53:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-92 text21 CODE >54:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-93 text21 CODE >59:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-98 text21 CODE >60:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-9C text21 CODE >61:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-A0 text21 CODE >62:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-A1 text21 CODE >63:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
-289 text20 CODE >21:E:\Projects\Box_concept\i2c_lcd_display_1519.X\interrupt.c
-289 text20 CODE >24:E:\Projects\Box_concept\i2c_lcd_display_1519.X\interrupt.c
-1F5 text18 CODE >57:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-1F5 text18 CODE >60:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-1F7 text18 CODE >61:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-1F8 text18 CODE >66:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-1FB text18 CODE >69:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-1FD text18 CODE >72:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-1FE text18 CODE >75:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-200 text18 CODE >78:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-202 text18 CODE >81:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-203 text18 CODE >84:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-204 text18 CODE >87:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-206 text18 CODE >89:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-208 text18 CODE >90:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-256 text17 CODE >102:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-256 text17 CODE >105:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-258 text17 CODE >107:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-25C text17 CODE >110:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-25D text17 CODE >113:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-25E text17 CODE >117:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-25F text17 CODE >119:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-261 text17 CODE >121:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-283 text16 CODE >93:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-283 text16 CODE >95:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-286 text16 CODE >98:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-287 text16 CODE >99:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-27C text15 CODE >18:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-27C text15 CODE >20:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-27E text15 CODE >21:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-282 text15 CODE >22:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-22D text14 CODE >31:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-22D text14 CODE >34:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-22F text14 CODE >35:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-230 text14 CODE >36:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-231 text14 CODE >37:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-232 text14 CODE >40:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-234 text14 CODE >41:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-235 text14 CODE >42:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-236 text14 CODE >43:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-237 text14 CODE >46:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-239 text14 CODE >47:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-23A text14 CODE >48:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-23B text14 CODE >49:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-23C text14 CODE >50:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-288 text13 CODE >52:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-288 text13 CODE >55:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-275 text12 CODE >26:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-275 text12 CODE >28:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-278 text12 CODE >29:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-27B text12 CODE >30:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-23D text11 CODE >10:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-23D text11 CODE >12:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-240 text11 CODE >13:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-243 text11 CODE >14:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-246 text11 CODE >15:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-249 text11 CODE >16:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
-186 text10 CODE >5:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-187 text10 CODE >7:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-18B text10 CODE >8:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-18E text10 CODE >9:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-18E text10 CODE >10:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-190 text10 CODE >12:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-194 text10 CODE >13:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-196 text10 CODE >14:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-196 text10 CODE >15:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-197 text10 CODE >17:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-19B text10 CODE >18:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-19D text10 CODE >19:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-19D text10 CODE >20:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-19E text10 CODE >22:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-1A2 text10 CODE >23:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-1A4 text10 CODE >24:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-1A4 text10 CODE >25:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-1A5 text10 CODE >26:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-1E1 text9 CODE >28:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-1E2 text9 CODE >30:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-1E4 text9 CODE >31:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-1E8 text9 CODE >32:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-1EA text9 CODE >33:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-1F2 text9 CODE >34:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-1F4 text9 CODE >35:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-26C text8 CODE >37:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-26C text8 CODE >39:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-270 text8 CODE >40:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-274 text8 CODE >41:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-EB text7 CODE >64:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-EB text7 CODE >66:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-EF text7 CODE >67:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-F6 text7 CODE >68:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-FA text7 CODE >69:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-101 text7 CODE >70:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-105 text7 CODE >71:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-10D text7 CODE >72:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-111 text7 CODE >74:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-115 text7 CODE >75:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-119 text7 CODE >76:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-11D text7 CODE >77:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-121 text7 CODE >78:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-125 text7 CODE >79:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-129 text7 CODE >80:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-12D text7 CODE >81:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-A2 text6 CODE >43:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-A4 text6 CODE >46:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-A9 text6 CODE >48:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-AE text6 CODE >49:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-B8 text6 CODE >50:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-BD text6 CODE >51:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-C1 text6 CODE >52:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-C6 text6 CODE >53:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-C7 text6 CODE >54:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-CD text6 CODE >56:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-D2 text6 CODE >57:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-DC text6 CODE >58:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-E1 text6 CODE >59:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-E5 text6 CODE >60:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-EA text6 CODE >62:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-15A text5 CODE >83:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-15B text5 CODE >86:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-160 text5 CODE >87:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-165 text5 CODE >88:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-167 text5 CODE >89:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-171 text5 CODE >90:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-173 text5 CODE >91:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-177 text5 CODE >92:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-179 text5 CODE >93:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-17D text5 CODE >94:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-17F text5 CODE >95:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-183 text5 CODE >96:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-185 text5 CODE >97:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-1A6 text4 CODE >99:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-1A6 text4 CODE >102:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-1AA text4 CODE >103:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-1C4 text4 CODE >104:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
-12E text3 CODE >51:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
-130 text3 CODE >53:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
-136 text3 CODE >54:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
-13D text3 CODE >55:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
-146 text3 CODE >56:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
-14B text3 CODE >57:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
-154 text3 CODE >58:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
-159 text3 CODE >59:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
-209 text2 CODE >44:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
-209 text2 CODE >47:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
-212 text2 CODE >48:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
-21B text2 CODE >49:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
-262 text1 CODE >35:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
-262 text1 CODE >37:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
-267 text1 CODE >38:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
-268 text1 CODE >39:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
-26B text1 CODE >41:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
-1C5 maintext CODE >16:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
-1C5 maintext CODE >19:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
-1C8 maintext CODE >21:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
-1CB maintext CODE >23:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
-1CE maintext CODE >24:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
-1D4 maintext CODE >25:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
-1DB maintext CODE >29:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
-1DE maintext CODE >30:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
+26F text23 CODE >72:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+26F text23 CODE >74:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+27D text23 CODE >76:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+28B text23 CODE >77:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+299 text23 CODE >79:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+29B text23 CODE >80:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+40 text22 CODE >12:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+40 text22 CODE >14:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+42 text22 CODE >15:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+44 text22 CODE >18:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+4C text22 CODE >20:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+51 text22 CODE >21:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+53 text22 CODE >22:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+54 text22 CODE >23:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+55 text22 CODE >27:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+5D text22 CODE >29:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+62 text22 CODE >30:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+67 text22 CODE >31:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+68 text22 CODE >32:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+68 text22 CODE >33:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+70 text22 CODE >35:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+79 text22 CODE >36:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+7D text22 CODE >37:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+82 text22 CODE >38:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+83 text22 CODE >39:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+83 text22 CODE >42:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+8B text22 CODE >44:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+90 text22 CODE >45:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+95 text22 CODE >46:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+97 text22 CODE >47:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+9D text22 CODE >50:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+9F text22 CODE >51:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+A4 text22 CODE >49:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+A4 text22 CODE >52:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+A9 text22 CODE >53:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+AA text22 CODE >54:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+AA text22 CODE >55:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+B2 text22 CODE >57:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+B2 text22 CODE >58:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+B3 text22 CODE >62:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+B7 text22 CODE >65:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+C8 text22 CODE >66:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+D6 text22 CODE >68:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+D8 text22 CODE >70:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_interrupt.c
+3D1 text21 CODE >21:E:\Projects\Box_concept\i2c_lcd_display_1519.X\interrupt.c
+3D1 text21 CODE >24:E:\Projects\Box_concept\i2c_lcd_display_1519.X\interrupt.c
+337 text19 CODE >57:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+337 text19 CODE >60:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+339 text19 CODE >61:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+33A text19 CODE >66:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+33D text19 CODE >69:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+33F text19 CODE >72:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+340 text19 CODE >75:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+342 text19 CODE >78:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+344 text19 CODE >81:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+345 text19 CODE >84:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+346 text19 CODE >87:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+348 text19 CODE >89:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+34A text19 CODE >90:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+398 text18 CODE >102:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+398 text18 CODE >105:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+39A text18 CODE >107:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+39E text18 CODE >110:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+39F text18 CODE >113:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+3A0 text18 CODE >117:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+3A1 text18 CODE >119:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+3A3 text18 CODE >121:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+3CB text17 CODE >93:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+3CB text17 CODE >95:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+3CE text17 CODE >98:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+3CF text17 CODE >99:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+3BE text16 CODE >18:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+3BE text16 CODE >20:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+3C0 text16 CODE >21:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+3C4 text16 CODE >22:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+36F text15 CODE >31:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+36F text15 CODE >34:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+371 text15 CODE >35:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+372 text15 CODE >36:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+373 text15 CODE >37:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+374 text15 CODE >40:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+376 text15 CODE >41:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+377 text15 CODE >42:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+378 text15 CODE >43:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+379 text15 CODE >46:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+37B text15 CODE >47:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+37C text15 CODE >48:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+37D text15 CODE >49:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+37E text15 CODE >50:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+3D0 text14 CODE >52:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+3D0 text14 CODE >55:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+3B7 text13 CODE >26:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+3B7 text13 CODE >28:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+3BA text13 CODE >29:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+3BD text13 CODE >30:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+37F text12 CODE >10:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+37F text12 CODE >12:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+382 text12 CODE >13:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+385 text12 CODE >14:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+388 text12 CODE >15:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+38B text12 CODE >16:E:\Projects\Box_concept\i2c_lcd_display_1519.X\init.c
+2C8 text11 CODE >5:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+2C9 text11 CODE >7:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+2CD text11 CODE >8:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+2D0 text11 CODE >9:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+2D0 text11 CODE >10:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+2D2 text11 CODE >12:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+2D6 text11 CODE >13:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+2D8 text11 CODE >14:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+2D8 text11 CODE >15:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+2D9 text11 CODE >17:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+2DD text11 CODE >18:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+2DF text11 CODE >19:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+2DF text11 CODE >20:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+2E0 text11 CODE >22:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+2E4 text11 CODE >23:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+2E6 text11 CODE >24:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+2E6 text11 CODE >25:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+2E7 text11 CODE >26:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+323 text10 CODE >28:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+324 text10 CODE >30:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+326 text10 CODE >31:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+32A text10 CODE >32:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+32C text10 CODE >33:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+334 text10 CODE >34:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+336 text10 CODE >35:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+3AE text9 CODE >37:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+3AE text9 CODE >39:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+3B2 text9 CODE >40:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+3B6 text9 CODE >41:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+1F0 text8 CODE >64:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+1F0 text8 CODE >66:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+1F4 text8 CODE >67:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+1FB text8 CODE >68:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+1FF text8 CODE >69:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+206 text8 CODE >70:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+20A text8 CODE >71:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+212 text8 CODE >72:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+216 text8 CODE >74:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+21A text8 CODE >75:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+21E text8 CODE >76:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+222 text8 CODE >77:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+226 text8 CODE >78:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+22A text8 CODE >79:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+22E text8 CODE >80:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+232 text8 CODE >81:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+147 text7 CODE >5:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
+147 text7 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
+149 text7 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
+14D text7 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
+152 text7 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
+154 text7 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
+158 text7 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
+15D text7 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
+161 text7 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
+163 text7 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
+169 text7 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
+16B text7 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
+16C text7 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
+171 text7 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
+175 text7 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
+179 text7 CODE >30:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
+17E text7 CODE >31:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
+188 text7 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
+18C text7 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
+18D text7 CODE >35:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
+192 text7 CODE >36:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
+198 text7 CODE >38:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
+19D text7 CODE >39:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
+1A2 text7 CODE >40:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
+1A6 text7 CODE >41:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
+1A7 text6 CODE >43:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+1A9 text6 CODE >46:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+1AE text6 CODE >48:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+1B3 text6 CODE >49:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+1BD text6 CODE >50:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+1C2 text6 CODE >51:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+1C6 text6 CODE >52:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+1CB text6 CODE >53:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+1CC text6 CODE >54:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+1D2 text6 CODE >56:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+1D7 text6 CODE >57:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+1E1 text6 CODE >58:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+1E6 text6 CODE >59:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+1EA text6 CODE >60:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+1EF text6 CODE >62:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+29C text5 CODE >83:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+29D text5 CODE >86:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+2A2 text5 CODE >87:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+2A7 text5 CODE >88:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+2A9 text5 CODE >89:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+2B3 text5 CODE >90:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+2B5 text5 CODE >91:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+2B9 text5 CODE >92:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+2BB text5 CODE >93:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+2BF text5 CODE >94:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+2C1 text5 CODE >95:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+2C5 text5 CODE >96:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+2C7 text5 CODE >97:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+2E8 text4 CODE >99:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+2E8 text4 CODE >102:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+2EC text4 CODE >103:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+306 text4 CODE >104:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
+D9 text3 CODE >73:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
+D9 text3 CODE >75:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
+DF text3 CODE >76:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
+E6 text3 CODE >77:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
+EC text3 CODE >78:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
+F3 text3 CODE >80:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
+F6 text3 CODE >81:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
+112 text3 CODE >82:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
+11C text3 CODE >83:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
+12C text3 CODE >84:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
+135 text3 CODE >85:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
+139 text3 CODE >86:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
+142 text3 CODE >87:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
+146 text3 CODE >89:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
+34B text2 CODE >47:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
+34B text2 CODE >49:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
+35D text2 CODE >52:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
+3A4 text1 CODE >35:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
+3A4 text1 CODE >37:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
+3A9 text1 CODE >38:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
+3AA text1 CODE >39:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
+3AD text1 CODE >41:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
+307 maintext CODE >16:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
+307 maintext CODE >19:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
+30A maintext CODE >21:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
+30D maintext CODE >23:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
+310 maintext CODE >24:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
+316 maintext CODE >25:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
+31D maintext CODE >29:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
+320 maintext CODE >30:E:\Projects\Box_concept\i2c_lcd_display_1519.X\i2c_lcd_display_1519.c
+3C5 clrtext CODE >1804:C:\Users\Joni1\AppData\Local\Temp\shgc.s
+3C5 clrtext CODE >1805:C:\Users\Joni1\AppData\Local\Temp\shgc.s
+3C6 clrtext CODE >1806:C:\Users\Joni1\AppData\Local\Temp\shgc.s
+3C6 clrtext CODE >1807:C:\Users\Joni1\AppData\Local\Temp\shgc.s
+3C7 clrtext CODE >1808:C:\Users\Joni1\AppData\Local\Temp\shgc.s
+3C8 clrtext CODE >1809:C:\Users\Joni1\AppData\Local\Temp\shgc.s
+3C9 clrtext CODE >1810:C:\Users\Joni1\AppData\Local\Temp\shgc.s
+3CA clrtext CODE >1811:C:\Users\Joni1\AppData\Local\Temp\shgc.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -368,20 +429,20 @@ EA text6 CODE >62:E:\Projects\Box_concept\i2c_lcd_display_1519.X\lcd_display.c
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 3 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
+___awdiv@counter A0 0 BANK1 1 cstackBANK1 dist/default/production\i2c_lcd_display_1519.X.production.o
 __Hspace_0 8009 0 ABS 0 - -
-__Hspace_1 7C 0 ABS 0 - -
+__Hspace_1 146 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __size_of_init_i2c 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
-_set_ports 510 0 CODE 0 text13 dist/default/production\i2c_lcd_display_1519.X.production.o
-__end_of_lcd_display_write_string 38A 0 CODE 0 text4 dist/default/production\i2c_lcd_display_1519.X.production.o
+_set_ports 7A0 0 CODE 0 text14 dist/default/production\i2c_lcd_display_1519.X.production.o
+__end_of_lcd_display_write_string 60E 0 CODE 0 text4 dist/default/production\i2c_lcd_display_1519.X.production.o
+_current_package 20 0 BANK0 1 bssBANK0 dist/default/production\i2c_lcd_display_1519.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-_i2c_addr 7B 0 COMMON 1 bssCOMMON dist/default/production\i2c_lcd_display_1519.X.production.o
-_i2c_data 7A 0 COMMON 1 bssCOMMON dist/default/production\i2c_lcd_display_1519.X.production.o
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 _BF 10A0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 __Hstrings 0 0 ABS 0 strings -
-_INT_FLAGS 2D 0 BANK0 1 bssBANK0 dist/default/production\i2c_lcd_display_1519.X.production.o
+_INT_FLAGS EF 0 BANK1 1 bssBANK1 dist/default/production\i2c_lcd_display_1519.X.production.o
 _D_nA 10A5 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 _LATA 10C 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 _LATB 10D 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
@@ -391,76 +452,85 @@ _R_nW 10A2 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 _T0IE 5D 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 _T0IF 5A 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 _TMR0 15 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Joni1\AppData\Local\Temp\s1h9k.o
-_init 47A 0 CODE 0 text11 dist/default/production\i2c_lcd_display_1519.X.production.o
-_main 38A 0 CODE 0 maintext dist/default/production\i2c_lcd_display_1519.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\Joni1\AppData\Local\Temp\shgc.o
+_init 6FE 0 CODE 0 text12 dist/default/production\i2c_lcd_display_1519.X.production.o
+_main 60E 0 CODE 0 maintext dist/default/production\i2c_lcd_display_1519.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
-start 42 0 CODE 0 init C:\Users\Joni1\AppData\Local\Temp\s1h9k.o
-__end_of_lcd_display_set_cursor 1D6 0 CODE 0 text6 dist/default/production\i2c_lcd_display_1519.X.production.o
+start 42 0 CODE 0 init C:\Users\Joni1\AppData\Local\Temp\shgc.o
+__size_of___awdiv 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
+__end_of_lcd_display_set_cursor 3E0 0 CODE 0 text6 dist/default/production\i2c_lcd_display_1519.X.production.o
 __size_of_init 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
-_lcd_display_cmd 3C2 0 CODE 0 text9 dist/default/production\i2c_lcd_display_1519.X.production.o
+_lcd_display_cmd 646 0 CODE 0 text10 dist/default/production\i2c_lcd_display_1519.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __end_of_interruptHandler 42 0 CODE 0 intentry dist/default/production\i2c_lcd_display_1519.X.production.o
 _OPTION_REGbits 95 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 __size_of_interruptHandler 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-display_i2c_data@line 27 0 BANK0 1 cstackBANK0 dist/default/production\i2c_lcd_display_1519.X.production.o
-lcd_display_port@a 72 0 COMMON 1 cstackCOMMON dist/default/production\i2c_lcd_display_1519.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\Joni1\AppData\Local\Temp\s1h9k.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Joni1\AppData\Local\Temp\s1h9k.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Joni1\AppData\Local\Temp\s1h9k.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Joni1\AppData\Local\Temp\s1h9k.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Joni1\AppData\Local\Temp\s1h9k.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Joni1\AppData\Local\Temp\s1h9k.o
+lcd_display_port@a 73 0 COMMON 1 cstackCOMMON dist/default/production\i2c_lcd_display_1519.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Joni1\AppData\Local\Temp\shgc.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Joni1\AppData\Local\Temp\shgc.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Joni1\AppData\Local\Temp\shgc.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Joni1\AppData\Local\Temp\shgc.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Joni1\AppData\Local\Temp\shgc.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Joni1\AppData\Local\Temp\shgc.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
-_init_i2c 3EA 0 CODE 0 text18 dist/default/production\i2c_lcd_display_1519.X.production.o
+_init_i2c 66E 0 CODE 0 text19 dist/default/production\i2c_lcd_display_1519.X.production.o
 _OSCCONbits 99 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 __size_of_init_oscillator 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
-_I2C_PACKAGE 2A 0 BANK0 1 bssBANK0 dist/default/production\i2c_lcd_display_1519.X.production.o
-_update_display 412 0 CODE 0 text2 dist/default/production\i2c_lcd_display_1519.X.production.o
+_I2C_PACKAGE CD 0 BANK1 1 bssBANK1 dist/default/production\i2c_lcd_display_1519.X.production.o
+_update_display 696 0 CODE 0 text2 dist/default/production\i2c_lcd_display_1519.X.production.o
+___awdiv@sign A1 0 BANK1 1 cstackBANK1 dist/default/production\i2c_lcd_display_1519.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
-__end_of_init_i2c 412 0 CODE 0 text18 dist/default/production\i2c_lcd_display_1519.X.production.o
-_init_interrupt_timer 4AC 0 CODE 0 text17 dist/default/production\i2c_lcd_display_1519.X.production.o
-lcd_display_set_cursor@a 20 0 BANK0 1 cstackBANK0 dist/default/production\i2c_lcd_display_1519.X.production.o
-lcd_display_set_cursor@b 75 0 COMMON 1 cstackCOMMON dist/default/production\i2c_lcd_display_1519.X.production.o
-lcd_display_set_cursor@y 22 0 BANK0 1 cstackBANK0 dist/default/production\i2c_lcd_display_1519.X.production.o
-lcd_display_set_cursor@z 21 0 BANK0 1 cstackBANK0 dist/default/production\i2c_lcd_display_1519.X.production.o
+__end_of_init_i2c 696 0 CODE 0 text19 dist/default/production\i2c_lcd_display_1519.X.production.o
+_init_interrupt_timer 730 0 CODE 0 text18 dist/default/production\i2c_lcd_display_1519.X.production.o
+lcd_display_set_cursor@a A6 0 BANK1 1 cstackBANK1 dist/default/production\i2c_lcd_display_1519.X.production.o
+lcd_display_set_cursor@b 78 0 COMMON 1 cstackCOMMON dist/default/production\i2c_lcd_display_1519.X.production.o
+lcd_display_set_cursor@y A8 0 BANK1 1 cstackBANK1 dist/default/production\i2c_lcd_display_1519.X.production.o
+lcd_display_set_cursor@z A7 0 BANK1 1 cstackBANK1 dist/default/production\i2c_lcd_display_1519.X.production.o
 _ANSELA 18C 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 _ANSELB 18D 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 _ANSELC 18E 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 _ANSELD 18F 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
-lcd_display_write_char@a 76 0 COMMON 1 cstackCOMMON dist/default/production\i2c_lcd_display_1519.X.production.o
-lcd_display_write_char@y 75 0 COMMON 1 cstackCOMMON dist/default/production\i2c_lcd_display_1519.X.production.o
+lcd_display_write_char@a 77 0 COMMON 1 cstackCOMMON dist/default/production\i2c_lcd_display_1519.X.production.o
+lcd_display_write_char@y 76 0 COMMON 1 cstackCOMMON dist/default/production\i2c_lcd_display_1519.X.production.o
+___awdiv@dividend 75 0 COMMON 1 cstackCOMMON dist/default/production\i2c_lcd_display_1519.X.production.o
 _SSPCONbits 215 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
-__end_of_res_ports 47A 0 CODE 0 text14 dist/default/production\i2c_lcd_display_1519.X.production.o
-__end_of_lcd_display_write_char 30C 0 CODE 0 text5 dist/default/production\i2c_lcd_display_1519.X.production.o
+__size_of_update_i2c_related_variables 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
+__end_of_res_ports 6FE 0 CODE 0 text15 dist/default/production\i2c_lcd_display_1519.X.production.o
+__end_of_lcd_display_write_char 590 0 CODE 0 text5 dist/default/production\i2c_lcd_display_1519.X.production.o
 __size_of_res_ports 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
-_display_i2c_data 25C 0 CODE 0 text3 dist/default/production\i2c_lcd_display_1519.X.production.o
+_display_i2c_data 1B2 0 CODE 0 text3 dist/default/production\i2c_lcd_display_1519.X.production.o
+__end_of_update_i2c_related_variables 538 0 CODE 0 text23 dist/default/production\i2c_lcd_display_1519.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-lcd_display_set_cursor@temp 23 0 BANK0 1 cstackBANK0 dist/default/production\i2c_lcd_display_1519.X.production.o
+lcd_display_set_cursor@temp A9 0 BANK1 1 cstackBANK1 dist/default/production\i2c_lcd_display_1519.X.production.o
 __size_of_init_ports 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
+___awdiv@divisor 73 0 COMMON 1 cstackCOMMON dist/default/production\i2c_lcd_display_1519.X.production.o
+__end_of___awdiv 34E 0 CODE 0 text7 dist/default/production\i2c_lcd_display_1519.X.production.o
 __size_of_lcd_display_cmd 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
-_res_ports 45A 0 CODE 0 text14 dist/default/production\i2c_lcd_display_1519.X.production.o
+_res_ports 6DE 0 CODE 0 text15 dist/default/production\i2c_lcd_display_1519.X.production.o
 __size_of_update_if_flag_set 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
-___stackhi 23EF 0 ABS 0 - C:\Users\Joni1\AppData\Local\Temp\s1h9k.o
-___stacklo 200E 0 ABS 0 - C:\Users\Joni1\AppData\Local\Temp\s1h9k.o
+___stackhi 23EF 0 ABS 0 - C:\Users\Joni1\AppData\Local\Temp\shgc.o
+___stacklo 20C6 0 ABS 0 - C:\Users\Joni1\AppData\Local\Temp\shgc.o
 __size_of_init_interrupt 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
-__end_of_update_display 438 0 CODE 0 text2 dist/default/production\i2c_lcd_display_1519.X.production.o
+__end_of_update_display 6BC 0 CODE 0 text2 dist/default/production\i2c_lcd_display_1519.X.production.o
 start_initialization 46 0 CODE 0 cinit dist/default/production\i2c_lcd_display_1519.X.production.o
-_on_interrupt_i2c 60 0 CODE 0 text21 dist/default/production\i2c_lcd_display_1519.X.production.o
+_on_interrupt_i2c 80 0 CODE 0 text22 dist/default/production\i2c_lcd_display_1519.X.production.o
 _TRISCbits 8E 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 _ACKSTAT 10B6 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
-_on_interrupt_timer_0 512 0 CODE 0 text20 dist/default/production\i2c_lcd_display_1519.X.production.o
-__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\i2c_lcd_display_1519.X.production.o
+_on_interrupt_timer_0 7A2 0 CODE 0 text21 dist/default/production\i2c_lcd_display_1519.X.production.o
+clear_ram0 78A 0 CODE 0 clrtext dist/default/production\i2c_lcd_display_1519.X.production.o
+__pcstackBANK0 42 0 BANK0 1 cstackBANK0 dist/default/production\i2c_lcd_display_1519.X.production.o
+__pcstackBANK1 A0 0 BANK1 1 cstackBANK1 dist/default/production\i2c_lcd_display_1519.X.production.o
+__pcstackBANK2 142 0 BANK2 1 cstackBANK2 dist/default/production\i2c_lcd_display_1519.X.production.o
 _SSPADD 212 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 _SSPBUF 211 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
-_MASKED_I2C_PACKAGE 28 0 BANK0 1 bssBANK0 dist/default/production\i2c_lcd_display_1519.X.production.o
+_MASKED_I2C_PACKAGE 120 0 BANK2 1 bssBANK2 dist/default/production\i2c_lcd_display_1519.X.production.o
 __size_of_lcd_display_set_cursor 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Joni1\AppData\Local\Temp\s1h9k.o
-__end_of_display_i2c_data 2B4 0 CODE 0 text3 dist/default/production\i2c_lcd_display_1519.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\Joni1\AppData\Local\Temp\shgc.o
+__end_of_display_i2c_data 28E 0 CODE 0 text3 dist/default/production\i2c_lcd_display_1519.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -471,7 +541,7 @@ __Hbank6 0 0 ABS 0 bank6 -
 __Hbank7 0 0 ABS 0 bank7 -
 __Hbank8 0 0 ABS 0 bank8 -
 __Hbank9 0 0 ABS 0 bank9 -
-__Hcinit 60 0 CODE 0 cinit -
+__Hcinit 80 0 CODE 0 cinit -
 __Hidloc 0 0 IDLOC 0 idloc -
 __Hsfr10 0 0 ABS 0 sfr10 -
 __Hsfr11 0 0 ABS 0 sfr11 -
@@ -520,8 +590,8 @@ __Hbank30 0 0 BANK30 1 bank30 -
 __Hbank31 0 0 BANK31 1 bank31 -
 __Hbigram 0 0 ABS 0 bigram -
 __Hmaintext 0 0 ABS 0 maintext -
-_lcd_display_init 1D6 0 CODE 0 text7 dist/default/production\i2c_lcd_display_1519.X.production.o
-_lcd_display_port 30C 0 CODE 0 text10 dist/default/production\i2c_lcd_display_1519.X.production.o
+_lcd_display_init 3E0 0 CODE 0 text8 dist/default/production\i2c_lcd_display_1519.X.production.o
+_lcd_display_port 590 0 CODE 0 text11 dist/default/production\i2c_lcd_display_1519.X.production.o
 __size_of_display_i2c_data 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 __CFG_FOSC$INTOSC 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 __Hcommon 0 0 ABS 0 common -
@@ -591,44 +661,55 @@ __Lsfr7 0 0 ABS 0 sfr7 -
 __Lsfr8 0 0 ABS 0 sfr8 -
 __Lsfr9 0 0 ABS 0 sfr9 -
 __Ltext 0 0 ABS 0 text -
-__pstringtext1 438 0 STRCODE 0 stringtext1 dist/default/production\i2c_lcd_display_1519.X.production.o
-__pstringtext2 494 0 STRCODE 0 stringtext2 dist/default/production\i2c_lcd_display_1519.X.production.o
-__pstringtext3 0 0 STRCODE 0 stringtext3 dist/default/production\i2c_lcd_display_1519.X.production.o
+__pstringtext1 466 0 STRCODE 0 stringtext1 dist/default/production\i2c_lcd_display_1519.X.production.o
+__pstringtext2 6BC 0 STRCODE 0 stringtext2 dist/default/production\i2c_lcd_display_1519.X.production.o
+__pstringtext3 718 0 STRCODE 0 stringtext3 dist/default/production\i2c_lcd_display_1519.X.production.o
+__pstringtext4 0 0 STRCODE 0 stringtext4 dist/default/production\i2c_lcd_display_1519.X.production.o
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__LcstackBANK1 0 0 ABS 0 cstackBANK1 -
+__LcstackBANK2 0 0 ABS 0 cstackBANK2 -
 int$flags 7E 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 _CKP 10AC 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 __S0 8009 0 ABS 0 - -
-__S1 7C 0 ABS 0 - -
+__S1 146 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
-__end_of_on_interrupt_i2c 144 0 CODE 0 text21 dist/default/production\i2c_lcd_display_1519.X.production.o
+display_i2c_data@i CC 0 BANK1 1 cstackBANK1 dist/default/production\i2c_lcd_display_1519.X.production.o
+__end_of_on_interrupt_i2c 1B2 0 CODE 0 text22 dist/default/production\i2c_lcd_display_1519.X.production.o
 __size_of_on_interrupt_i2c 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 __size_of_lcd_display_write_char 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 __CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Joni1\AppData\Local\Temp\s1h9k.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Joni1\AppData\Local\Temp\shgc.o
+__end_of_I2C_PACKAGE_EMPTY 4AA 0 STRCODE 0 stringtext1 dist/default/production\i2c_lcd_display_1519.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
+__LbssBANK1 0 0 ABS 0 bssBANK1 -
+__LbssBANK2 0 0 ABS 0 bssBANK2 -
 __CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 __Lstringtext1 0 0 ABS 0 stringtext1 -
 __Lstringtext2 0 0 ABS 0 stringtext2 -
 __Lstringtext3 0 0 ABS 0 stringtext3 -
-__end_of_lcd_display_init 25C 0 CODE 0 text7 dist/default/production\i2c_lcd_display_1519.X.production.o
-__end_of_lcd_display_port 34C 0 CODE 0 text10 dist/default/production\i2c_lcd_display_1519.X.production.o
-lcd_display_cmd@a 74 0 COMMON 1 cstackCOMMON dist/default/production\i2c_lcd_display_1519.X.production.o
-__ptext10 30C 0 CODE 0 text10 dist/default/production\i2c_lcd_display_1519.X.production.o
-__ptext11 47A 0 CODE 0 text11 dist/default/production\i2c_lcd_display_1519.X.production.o
-__ptext12 4EA 0 CODE 0 text12 dist/default/production\i2c_lcd_display_1519.X.production.o
-__ptext13 510 0 CODE 0 text13 dist/default/production\i2c_lcd_display_1519.X.production.o
-__ptext14 45A 0 CODE 0 text14 dist/default/production\i2c_lcd_display_1519.X.production.o
-__ptext15 4F8 0 CODE 0 text15 dist/default/production\i2c_lcd_display_1519.X.production.o
-__ptext16 506 0 CODE 0 text16 dist/default/production\i2c_lcd_display_1519.X.production.o
-__ptext17 4AC 0 CODE 0 text17 dist/default/production\i2c_lcd_display_1519.X.production.o
-__ptext18 3EA 0 CODE 0 text18 dist/default/production\i2c_lcd_display_1519.X.production.o
-__ptext20 512 0 CODE 0 text20 dist/default/production\i2c_lcd_display_1519.X.production.o
-__ptext21 60 0 CODE 0 text21 dist/default/production\i2c_lcd_display_1519.X.production.o
+__Lstringtext4 0 0 ABS 0 stringtext4 -
+__end_of_lcd_display_init 466 0 CODE 0 text8 dist/default/production\i2c_lcd_display_1519.X.production.o
+__end_of_lcd_display_port 5D0 0 CODE 0 text11 dist/default/production\i2c_lcd_display_1519.X.production.o
+lcd_display_cmd@a 75 0 COMMON 1 cstackCOMMON dist/default/production\i2c_lcd_display_1519.X.production.o
+__ptext10 646 0 CODE 0 text10 dist/default/production\i2c_lcd_display_1519.X.production.o
+__ptext11 590 0 CODE 0 text11 dist/default/production\i2c_lcd_display_1519.X.production.o
+__ptext12 6FE 0 CODE 0 text12 dist/default/production\i2c_lcd_display_1519.X.production.o
+__ptext13 76E 0 CODE 0 text13 dist/default/production\i2c_lcd_display_1519.X.production.o
+__ptext14 7A0 0 CODE 0 text14 dist/default/production\i2c_lcd_display_1519.X.production.o
+__ptext15 6DE 0 CODE 0 text15 dist/default/production\i2c_lcd_display_1519.X.production.o
+__ptext16 77C 0 CODE 0 text16 dist/default/production\i2c_lcd_display_1519.X.production.o
+__ptext17 796 0 CODE 0 text17 dist/default/production\i2c_lcd_display_1519.X.production.o
+__ptext18 730 0 CODE 0 text18 dist/default/production\i2c_lcd_display_1519.X.production.o
+__ptext19 66E 0 CODE 0 text19 dist/default/production\i2c_lcd_display_1519.X.production.o
+__ptext21 7A2 0 CODE 0 text21 dist/default/production\i2c_lcd_display_1519.X.production.o
+__ptext22 80 0 CODE 0 text22 dist/default/production\i2c_lcd_display_1519.X.production.o
+__ptext23 4DE 0 CODE 0 text23 dist/default/production\i2c_lcd_display_1519.X.production.o
+___awdiv 28E 0 CODE 0 text7 dist/default/production\i2c_lcd_display_1519.X.production.o
 __size_of_lcd_display_init 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 __size_of_lcd_display_port 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
-_lcd_display_write_string 34C 0 CODE 0 text4 dist/default/production\i2c_lcd_display_1519.X.production.o
+_lcd_display_write_string 5D0 0 CODE 0 text4 dist/default/production\i2c_lcd_display_1519.X.production.o
 __Lbank10 0 0 ABS 0 bank10 -
 __Lbank11 0 0 ABS 0 bank11 -
 __Lbank12 0 0 ABS 0 bank12 -
@@ -651,7 +732,7 @@ __Lbank28 0 0 BANK28 1 bank28 -
 __Lbank29 0 0 BANK29 1 bank29 -
 __Lbank30 0 0 BANK30 1 bank30 -
 __Lbank31 0 0 BANK31 1 bank31 -
-__pmaintext 38A 0 CODE 0 maintext dist/default/production\i2c_lcd_display_1519.X.production.o
+__pmaintext 60E 0 CODE 0 maintext dist/default/production\i2c_lcd_display_1519.X.production.o
 __Lbigram 0 0 ABS 0 bigram -
 __CFG_BORV$LO 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 __Lcommon 0 0 ABS 0 common -
@@ -659,8 +740,9 @@ __Lconfig 1000E 0 CONFIG 0 config -
 __CFG_CP$OFF 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 __CFG_IESO$ON 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
+_LATCbits 10E 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 __CFG_VCAPEN$OFF 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
-__end_of_lcd_display_clear 4EA 0 CODE 0 text8 dist/default/production\i2c_lcd_display_1519.X.production.o
+__end_of_lcd_display_clear 76E 0 CODE 0 text9 dist/default/production\i2c_lcd_display_1519.X.production.o
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 __size_of_init_interrupt_timer 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 __Lspace_0 0 0 ABS 0 - -
@@ -669,47 +751,55 @@ __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __pbssCOMMON 7A 0 COMMON 1 bssCOMMON dist/default/production\i2c_lcd_display_1519.X.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__HcstackBANK1 0 0 ABS 0 cstackBANK1 -
+__HcstackBANK2 0 0 ABS 0 cstackBANK2 -
 __Lend_init 42 0 CODE 0 end_init -
 __size_of_update_display 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-end_of_initialization 58 0 CODE 0 cinit dist/default/production\i2c_lcd_display_1519.X.production.o
-_init_interrupt 506 0 CODE 0 text16 dist/default/production\i2c_lcd_display_1519.X.production.o
+end_of_initialization 78 0 CODE 0 cinit dist/default/production\i2c_lcd_display_1519.X.production.o
+_init_interrupt 796 0 CODE 0 text17 dist/default/production\i2c_lcd_display_1519.X.production.o
 __Hintentry 42 0 CODE 0 intentry -
-lcd_display_write_string@a 77 0 COMMON 1 cstackCOMMON dist/default/production\i2c_lcd_display_1519.X.production.o
-lcd_display_write_string@i 20 0 BANK0 1 cstackBANK0 dist/default/production\i2c_lcd_display_1519.X.production.o
+lcd_display_write_string@a 78 0 COMMON 1 cstackCOMMON dist/default/production\i2c_lcd_display_1519.X.production.o
+lcd_display_write_string@i A1 0 BANK1 1 cstackBANK1 dist/default/production\i2c_lcd_display_1519.X.production.o
 __CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 __Lstrings 0 0 ABS 0 strings -
-__end_of_init_interrupt_timer 4C4 0 CODE 0 text17 dist/default/production\i2c_lcd_display_1519.X.production.o
+___awdiv@quotient A2 0 BANK1 1 cstackBANK1 dist/default/production\i2c_lcd_display_1519.X.production.o
+?___awdiv 73 0 COMMON 1 cstackCOMMON dist/default/production\i2c_lcd_display_1519.X.production.o
+__end_of_init_interrupt_timer 748 0 CODE 0 text18 dist/default/production\i2c_lcd_display_1519.X.production.o
 __Hreset_vec 4 0 CODE 0 reset_vec -
+_I2C_PACKAGE_EMPTY 466 0 STRCODE 0 stringtext1 dist/default/production\i2c_lcd_display_1519.X.production.o
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
-_lcd_display_set_cursor 144 0 CODE 0 text6 dist/default/production\i2c_lcd_display_1519.X.production.o
-__ptext1 4C4 0 CODE 0 text1 dist/default/production\i2c_lcd_display_1519.X.production.o
-__ptext2 412 0 CODE 0 text2 dist/default/production\i2c_lcd_display_1519.X.production.o
-__ptext3 25C 0 CODE 0 text3 dist/default/production\i2c_lcd_display_1519.X.production.o
-__ptext4 34C 0 CODE 0 text4 dist/default/production\i2c_lcd_display_1519.X.production.o
-__ptext5 2B4 0 CODE 0 text5 dist/default/production\i2c_lcd_display_1519.X.production.o
-__ptext6 144 0 CODE 0 text6 dist/default/production\i2c_lcd_display_1519.X.production.o
-__ptext7 1D6 0 CODE 0 text7 dist/default/production\i2c_lcd_display_1519.X.production.o
-__ptext8 4D8 0 CODE 0 text8 dist/default/production\i2c_lcd_display_1519.X.production.o
-__ptext9 3C2 0 CODE 0 text9 dist/default/production\i2c_lcd_display_1519.X.production.o
+__HbssBANK1 0 0 ABS 0 bssBANK1 -
+__HbssBANK2 0 0 ABS 0 bssBANK2 -
+_lcd_display_set_cursor 34E 0 CODE 0 text6 dist/default/production\i2c_lcd_display_1519.X.production.o
+__ptext1 748 0 CODE 0 text1 dist/default/production\i2c_lcd_display_1519.X.production.o
+__ptext2 696 0 CODE 0 text2 dist/default/production\i2c_lcd_display_1519.X.production.o
+__ptext3 1B2 0 CODE 0 text3 dist/default/production\i2c_lcd_display_1519.X.production.o
+__ptext4 5D0 0 CODE 0 text4 dist/default/production\i2c_lcd_display_1519.X.production.o
+__ptext5 538 0 CODE 0 text5 dist/default/production\i2c_lcd_display_1519.X.production.o
+__ptext6 34E 0 CODE 0 text6 dist/default/production\i2c_lcd_display_1519.X.production.o
+__ptext7 28E 0 CODE 0 text7 dist/default/production\i2c_lcd_display_1519.X.production.o
+__ptext8 3E0 0 CODE 0 text8 dist/default/production\i2c_lcd_display_1519.X.production.o
+__ptext9 75C 0 CODE 0 text9 dist/default/production\i2c_lcd_display_1519.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
-_init_ports 4EA 0 CODE 0 text12 dist/default/production\i2c_lcd_display_1519.X.production.o
+_init_ports 76E 0 CODE 0 text13 dist/default/production\i2c_lcd_display_1519.X.production.o
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
-display_i2c_data@i2c_package 24 0 BANK0 1 cstackBANK0 dist/default/production\i2c_lcd_display_1519.X.production.o
+display_i2c_data@i2c_package AA 0 BANK1 1 cstackBANK1 dist/default/production\i2c_lcd_display_1519.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec -
 __Hstringtext1 0 0 ABS 0 stringtext1 -
 __Hstringtext2 0 0 ABS 0 stringtext2 -
 __Hstringtext3 0 0 ABS 0 stringtext3 -
+__Hstringtext4 0 0 ABS 0 stringtext4 -
 __CFG_LPBOR$OFF 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
-__end_of_update_if_flag_set 4D8 0 CODE 0 text1 dist/default/production\i2c_lcd_display_1519.X.production.o
+__end_of_update_if_flag_set 75C 0 CODE 0 text1 dist/default/production\i2c_lcd_display_1519.X.production.o
 __CFG_CLKOUTEN$OFF 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
-__end_of__initialization 58 0 CODE 0 cinit dist/default/production\i2c_lcd_display_1519.X.production.o
-__end_of_init_oscillator 506 0 CODE 0 text15 dist/default/production\i2c_lcd_display_1519.X.production.o
+__end_of__initialization 78 0 CODE 0 cinit dist/default/production\i2c_lcd_display_1519.X.production.o
+__end_of_init_oscillator 78A 0 CODE 0 text16 dist/default/production\i2c_lcd_display_1519.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
-__end_of_init_interrupt 510 0 CODE 0 text16 dist/default/production\i2c_lcd_display_1519.X.production.o
+__end_of_init_interrupt 7A0 0 CODE 0 text17 dist/default/production\i2c_lcd_display_1519.X.production.o
 __size_of_lcd_display_write_string 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
-_lcd_display_clear 4D8 0 CODE 0 text8 dist/default/production\i2c_lcd_display_1519.X.production.o
+_lcd_display_clear 75C 0 CODE 0 text9 dist/default/production\i2c_lcd_display_1519.X.production.o
 __size_of_on_interrupt_timer_0 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\i2c_lcd_display_1519.X.production.o
 _SSPCON1 215 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
@@ -718,35 +808,40 @@ _SSPCON3 217 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production
 _SSPSTAT 214 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 __Hend_init 46 0 CODE 0 end_init -
 _interruptHandler 8 0 CODE 0 intentry dist/default/production\i2c_lcd_display_1519.X.production.o
-__end_of_init 494 0 CODE 0 text11 dist/default/production\i2c_lcd_display_1519.X.production.o
-__end_of_main 3C2 0 CODE 0 maintext dist/default/production\i2c_lcd_display_1519.X.production.o
-_update_if_flag_set 4C4 0 CODE 0 text1 dist/default/production\i2c_lcd_display_1519.X.production.o
-__end_of_on_interrupt_timer_0 514 0 CODE 0 text20 dist/default/production\i2c_lcd_display_1519.X.production.o
-lcd_display_write_char@temp 74 0 COMMON 1 cstackCOMMON dist/default/production\i2c_lcd_display_1519.X.production.o
+__end_of_init 718 0 CODE 0 text12 dist/default/production\i2c_lcd_display_1519.X.production.o
+__end_of_main 646 0 CODE 0 maintext dist/default/production\i2c_lcd_display_1519.X.production.o
+_update_if_flag_set 748 0 CODE 0 text1 dist/default/production\i2c_lcd_display_1519.X.production.o
+__end_of_on_interrupt_timer_0 7A4 0 CODE 0 text21 dist/default/production\i2c_lcd_display_1519.X.production.o
+lcd_display_write_char@temp 75 0 COMMON 1 cstackCOMMON dist/default/production\i2c_lcd_display_1519.X.production.o
 _LATA0 860 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 _LATA1 861 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 _LATA2 862 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 _LATA3 863 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 _LATB0 868 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 _LATB1 869 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
-_lcd_display_write_char 2B4 0 CODE 0 text5 dist/default/production\i2c_lcd_display_1519.X.production.o
+_lcd_display_write_char 538 0 CODE 0 text5 dist/default/production\i2c_lcd_display_1519.X.production.o
 _SSPIE 48B 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 _SSPIF 8B 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 _TRISA 8C 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 _TRISB 8D 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 _TRISC 8E 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 _TRISD 8F 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
+_update_i2c_related_variables 4DE 0 CODE 0 text23 dist/default/production\i2c_lcd_display_1519.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-__end_of_init_ports 4F8 0 CODE 0 text12 dist/default/production\i2c_lcd_display_1519.X.production.o
+__end_of_init_ports 77C 0 CODE 0 text13 dist/default/production\i2c_lcd_display_1519.X.production.o
+_SSPSTATbits 214 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 __pintentry 8 0 CODE 0 intentry dist/default/production\i2c_lcd_display_1519.X.production.o
 __initialization 46 0 CODE 0 cinit dist/default/production\i2c_lcd_display_1519.X.production.o
 __CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
-__end_of_lcd_display_cmd 3EA 0 CODE 0 text9 dist/default/production\i2c_lcd_display_1519.X.production.o
-_init_oscillator 4F8 0 CODE 0 text15 dist/default/production\i2c_lcd_display_1519.X.production.o
-__pbssBANK0 28 0 BANK0 1 bssBANK0 dist/default/production\i2c_lcd_display_1519.X.production.o
+__end_of_lcd_display_cmd 66E 0 CODE 0 text10 dist/default/production\i2c_lcd_display_1519.X.production.o
+_init_oscillator 77C 0 CODE 0 text16 dist/default/production\i2c_lcd_display_1519.X.production.o
+__pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production\i2c_lcd_display_1519.X.production.o
+__pbssBANK1 CD 0 BANK1 1 bssBANK1 dist/default/production\i2c_lcd_display_1519.X.production.o
+__pbssBANK2 120 0 BANK2 1 bssBANK2 dist/default/production\i2c_lcd_display_1519.X.production.o
 __CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
-__end_of_set_ports 512 0 CODE 0 text13 dist/default/production\i2c_lcd_display_1519.X.production.o
+update_i2c_related_variables@package 42 0 BANK0 1 cstackBANK0 dist/default/production\i2c_lcd_display_1519.X.production.o
+__end_of_set_ports 7A2 0 CODE 0 text14 dist/default/production\i2c_lcd_display_1519.X.production.o
 __size_of_set_ports 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
@@ -773,14 +868,18 @@ __size_of_set_ports 0 0 ABS 0 - dist/default/production\i2c_lcd_display_1519.X.p
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text14 0 22D 45A 1D 2
-text17 0 256 4AC 34 2
-cstackCOMMON 1 70 70 C 1
-cstackBANK0 1 20 20 E 1
-stringtext1 0 21C 438 11 2
-stringtext2 0 24A 494 C 2
-intentry 0 4 8 218 2
+text15 0 36F 6DE 1D 2
+text18 0 398 730 3A 2
+text23 0 26F 4DE EF 2
+cstackCOMMON 1 70 70 B 1
+cstackBANK1 1 A0 A0 50 1
+stringtext1 0 233 466 3C 2
+stringtext2 0 35E 6BC 11 2
+stringtext3 0 38C 718 C 2
+intentry 0 4 8 22F 2
 reset_vec 0 0 0 2 2
+bssBANK0 1 20 20 44 1
+bssBANK2 1 120 120 26 1
 config 0 8007 1000E 2 2
 # OTES Section
 # This section contains data of all the note-psects.  The beginning of the section

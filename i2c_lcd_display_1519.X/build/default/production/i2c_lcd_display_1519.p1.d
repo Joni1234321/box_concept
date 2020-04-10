@@ -5,4 +5,5 @@ config.h  \
 init.h  \
 interrupt.h  \
 i2c_interrupt.h  \
+i2c_classes.h  \
 lcd_display.h 

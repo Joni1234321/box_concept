@@ -3253,12 +3253,37 @@ typedef uint32_t uint_fast32_t;
 # 5 "./i2c_interrupt.h" 2
 
 
+# 1 "./i2c_classes.h" 1
+
+
+
+
+
+
+
+
 typedef struct {
     uint8_t addr;
-    uint8_t data;
+    struct {
+        uint8_t value[32];
+        uint8_t index;
+    } data;
+
 } i2c_package_t;
+
+const i2c_package_t I2C_PACKAGE_EMPTY;
+
 volatile i2c_package_t I2C_PACKAGE;
 volatile i2c_package_t MASKED_I2C_PACKAGE;
+
+typedef struct {
+    uint8_t command;
+
+    uint8_t parameters[32];
+    uint8_t parameter_index;
+
+}i2c_command_t;
+# 7 "./i2c_interrupt.h" 2
 
 
 void on_interrupt_i2c (void);
@@ -3276,10 +3301,16 @@ typedef union {
 volatile int_flag_t INT_FLAGS;
 # 3 "i2c_interrupt.c" 2
 
+# 1 "./global.h" 1
+# 4 "i2c_interrupt.c" 2
 
-uint8_t i2c_addr = 0x00;
-uint8_t i2c_data = 0x00;
-void update_i2c_related_variables();
+
+void add_data_to_stack(i2c_command_t *command, uint8_t data);
+
+void update_i2c_related_variables(i2c_package_t package);
+void i2c_data_handler();
+
+i2c_package_t current_package;
 void on_interrupt_i2c (void)
 {
     SSPIF = 0;
@@ -3288,7 +3319,7 @@ void on_interrupt_i2c (void)
 
     if ((SSPCONbits.SSPOV) || (SSPCONbits.WCOL))
     {
-      i2c_addr = SSPBUF;
+      current_package.addr = SSPBUF;
       SSPCONbits.SSPOV = 0;
       SSPCONbits.WCOL = 0;
       SSPCONbits.CKP = 1;
@@ -3297,14 +3328,14 @@ void on_interrupt_i2c (void)
 
     if(!D_nA && !R_nW)
     {
-        i2c_addr = SSPBUF;
+        current_package.addr = SSPBUF;
         while(BF);
         CKP = 1;
-
     }
     if (D_nA && !R_nW)
     {
-        i2c_data = SSPBUF;
+        current_package.data.value[current_package.data.index] = SSPBUF;
+        current_package.data.index++;
         while(BF);
         CKP = 1;
     }
@@ -3312,7 +3343,7 @@ void on_interrupt_i2c (void)
 
     if(!D_nA && R_nW)
     {
-        i2c_addr = SSPBUF;
+        current_package.addr = SSPBUF;
         while(BF);
         SSPBUF = 0x54;
         while (SSPIF);
@@ -3330,13 +3361,34 @@ void on_interrupt_i2c (void)
     }
 
 
+    if (SSPSTATbits.P)
+    {
+
+        update_i2c_related_variables(current_package);
+        current_package = I2C_PACKAGE_EMPTY;
+
+        CKP = 1;
+    }
+}
+
+void update_i2c_related_variables(i2c_package_t package)
+{
+    LATCbits.LATC7 ^= 1;
 
     MASKED_I2C_PACKAGE = I2C_PACKAGE;
-    I2C_PACKAGE.addr = i2c_addr;
-    I2C_PACKAGE.data = i2c_data;
+    I2C_PACKAGE = package;
+
     INT_FLAGS.update_lcd_display = 1;
 }
-void update_i2c_related_variables()
+
+
+
+void i2c_data_handler()
+{
+
+}
+
+void add_data_to_stack(i2c_command_t *command, uint8_t data)
 {
 
 }

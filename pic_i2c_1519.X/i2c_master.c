@@ -8,20 +8,25 @@ uint8_t i2c_master_write(unsigned data);
 void i2c_master_wait(void);
 
 
-
 // Sends data
-void i2c_master_send (uint8_t i2c_add, uint8_t data)
+void i2c_master_send (uint8_t i2c_add, uint8_t *data)
 {
     uint8_t i2c_address = i2c_add + 0; // Create the bus address and clear to write
     
     i2c_master_start();                     //Start condition
     
+    // ADDRESS
     if(i2c_master_write(i2c_add))   return; //7 bit address + Write
-    if(i2c_master_write(data))      return; //Write data
-
+    // DATA
+    
+	for(uint8_t i = 0; data[i] != '\0'; i++ ) {
+        if(i2c_master_write(data[i]))   return; //Write 
+    }
+    
     i2c_master_stop();                      //Stop condition
 
 }
+
 // Read data
 void i2c_master_read (uint8_t i2c_add, uint8_t *data)
 {

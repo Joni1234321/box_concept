@@ -4,7 +4,7 @@
 #include <xc.h> 
 #include <stdint.h>
 
-void i2c_master_send (uint8_t i2c_add, uint8_t data);
+void i2c_master_send (uint8_t i2c_add, uint8_t *data);
 void i2c_master_read (uint8_t i2c_add, uint8_t *data);
 
 
