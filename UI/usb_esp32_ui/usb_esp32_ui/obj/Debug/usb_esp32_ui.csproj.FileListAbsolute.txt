@@ -1,0 +1,9 @@
+E:\Projects\Box_concept\UI\usb_esp32_ui\usb_esp32_ui\bin\Debug\usb_esp32_ui.exe.config
+E:\Projects\Box_concept\UI\usb_esp32_ui\usb_esp32_ui\bin\Debug\usb_esp32_ui.exe
+E:\Projects\Box_concept\UI\usb_esp32_ui\usb_esp32_ui\bin\Debug\usb_esp32_ui.pdb
+E:\Projects\Box_concept\UI\usb_esp32_ui\usb_esp32_ui\obj\Debug\usb_esp32_ui.csprojAssemblyReference.cache
+E:\Projects\Box_concept\UI\usb_esp32_ui\usb_esp32_ui\obj\Debug\usb_esp32_ui.Form1.resources
+E:\Projects\Box_concept\UI\usb_esp32_ui\usb_esp32_ui\obj\Debug\usb_esp32_ui.Properties.Resources.resources
+E:\Projects\Box_concept\UI\usb_esp32_ui\usb_esp32_ui\obj\Debug\usb_esp32_ui.csproj.GenerateResource.cache
+E:\Projects\Box_concept\UI\usb_esp32_ui\usb_esp32_ui\obj\Debug\usb_esp32_ui.exe
+E:\Projects\Box_concept\UI\usb_esp32_ui\usb_esp32_ui\obj\Debug\usb_esp32_ui.pdb

@@ -1,4 +1,6 @@
 #include <xc.h>
+
+#include "global.h"
 #include "init.h"
 
 void init_oscillator(void);
@@ -72,7 +74,7 @@ void init_i2c (void)
     SSPCON3 = 0b00000000;
     
     // Set slave address
-    SSPADD = 0x30;
+    SSPADD = I2C_ADDRESS;
     
     // Disable the slew rate control since 100 kHz is used
     SSPSTAT = 0x80;
