@@ -23,7 +23,7 @@ PIC controller der kan sende I2C signal til en PIC controller der kan vise noget
 
 PIC controller der kan modtage og sende data gennem en UART port forbundet med computeren
 
-** CHANGING PIC TO ESP32 **
+** Udskiftede PIC til ESP32 **
 
 **PC->USB->ESP32->I2C**
 - [ ] Doing
