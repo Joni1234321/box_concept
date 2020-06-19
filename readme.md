@@ -29,7 +29,7 @@ PIC controller der kan modtage og sende data gennem en UART port forbundet med c
 - [ ] Doing
 
 ESP32 modul forbundet med pc gennem USB, og sender data videre til LCD skærm
-*pc_uart_esp32
+* pc_uart_esp32
 
 **PC->USB->ESP32->I2C->PIC->Display**
 - [ ] Not Completed 
